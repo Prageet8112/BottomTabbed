@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Data.EventActivity" />
+        <activity android:name=".fragments.CodeItOut" />
+        <activity android:name=".FinalActivity.Codex"></activity>
     </application>
 
 </manifest>

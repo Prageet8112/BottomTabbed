@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/chrome_grey"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -23,13 +24,20 @@
         android:layout_height="1dp"
         android:background="@drawable/bottom_shadow" />
 
-
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
-        android:orientation="vertical">
+        android:padding="0dp"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
 
 
     </FrameLayout>
@@ -47,6 +55,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/white" />
+        android:background="#000000" />
 
 </LinearLayout>

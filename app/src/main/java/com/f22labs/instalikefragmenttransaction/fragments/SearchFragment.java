@@ -31,7 +31,7 @@ public class SearchFragment extends BaseFragment{
 
         ButterKnife.bind(this, view);
 
-        ( (MainActivity)getActivity()).updateToolbarTitle("Search");
+        ( (MainActivity)getActivity()).updateToolbarTitle("Calender");
 
 
         return view;

@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">InstaLikeFragmentTransaction</string>
+    <string name="app_name">TechVibes</string>
+    <string name="clickme">CLICK ME</string>
 
     <array name="tab_name">
         <item>Home</item>
-        <item>Search</item>
-        <item>Share</item>
-        <item>News</item>
-        <item>Profile</item>
+        <item>Schedule</item>
+        <item>Contacts</item>
+        <item>My Activity</item>
+
     </array>
 
 

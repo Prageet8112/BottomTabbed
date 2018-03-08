@@ -1,8 +1,13 @@
 package com.f22labs.instalikefragmenttransaction.activities;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.graphics.BitmapCompat;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -35,11 +40,11 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
     Toolbar toolbar;
 
     private int[] mTabIconsSelected = {
-            R.drawable.tab_home,
-            R.drawable.tab_search,
-            R.drawable.tab_share,
-            R.drawable.tab_news,
-            R.drawable.tab_profile};
+            R.drawable.tab_home2,
+            R.drawable.tab_calender,
+            R.drawable.tab_contact,
+            R.drawable.tab_my_activity,
+            };
 
 
     @BindArray(R.array.tab_name)
@@ -75,6 +80,16 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 
 
         switchTab(0);
+
+/*        ImageView imageView1 = (ImageView) findViewById(R.id.img1);
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.login1);
+        RoundedBitmapDrawable rbd = RoundedBitmapDrawableFactory.create(getResources(),bitmap);
+        rbd.setCircular(true);
+        imageView1.setImageDrawable(rbd);
+*/
+
+
 
         bottomTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -284,8 +299,6 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
                 return new ShareFragment();
             case FragNavController.TAB4:
                 return new NewsFragment();
-            case FragNavController.TAB5:
-                return new ProfileFragment();
 
 
         }

@@ -78,7 +78,7 @@ public class NewsFragment extends BaseFragment{
         });
 
 
-        ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "News" : "Sub News "+fragCount);
+        ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "MyActivity" : "Sub News "+fragCount);
 
 
     }

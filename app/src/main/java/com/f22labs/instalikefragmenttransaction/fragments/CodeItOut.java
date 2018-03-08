@@ -1,7 +1,9 @@
-package com.f22labs.instalikefragmenttransaction.fragments;
+/*package com.f22labs.instalikefragmenttransaction.subGroupAct;
 
-import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,9 @@ import android.widget.Toast;
 import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
+import com.f22labs.instalikefragmenttransaction.fragments.BaseFragment;
+import com.f22labs.instalikefragmenttransaction.fragments.HomeFragment;
+import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterContacts;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterEvents;
 
 import java.util.ArrayList;
@@ -20,11 +25,59 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+public class CodeItOut extends BaseFragment {
 
-public class HomeFragment extends BaseFragment {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
+
+        ButterKnife.bind(this, rootView);
+
+        return rootView;
+    }
+
+    public static CodeItOut newInstance(int instance) {
+        Bundle args = new Bundle();
+        args.putInt(ARGS_INSTANCE, instance);
+        CodeItOut fragment = new CodeItOut();
+        fragment.setArguments(args);
+        return fragment;
+    }
+}*/
+package com.f22labs.instalikefragmenttransaction.fragments;
+
+        import android.os.Bundle;
+        import android.support.annotation.Nullable;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.AdapterView;
+        import android.widget.Button;
+        import android.widget.ListView;
+        import android.widget.Toast;
+
+        import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
+        import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
+        import com.f22labs.instalikefragmenttransaction.R;
+        import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
+        import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterEvents;
+
+        import java.util.ArrayList;
+
+        import butterknife.BindView;
+        import butterknife.ButterKnife;
 
 
-    @BindView(R.id.btn_click_me)
+public class CodeItOut extends BaseFragment {
+
+
+    @BindView(R.id.btn1)
     Button btnClickMe;
     ListView lv;
     CustomAdapterEvents adapter;
@@ -32,16 +85,16 @@ public class HomeFragment extends BaseFragment {
     int fragCount;
 
 
-    public static HomeFragment newInstance(int instance) {
+    public static CodeItOut newInstance(int instance) {
         Bundle args = new Bundle();
         args.putInt(ARGS_INSTANCE, instance);
-        HomeFragment fragment = new HomeFragment();
+        CodeItOut fragment = new CodeItOut();
         fragment.setArguments(args);
         return fragment;
     }
 
 
-    public HomeFragment() {
+    public CodeItOut() {
         // Required empty public constructor
     }
 
@@ -58,7 +111,7 @@ public class HomeFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
 
         ButterKnife.bind(this, rootView);
@@ -68,12 +121,12 @@ public class HomeFragment extends BaseFragment {
             fragCount = args.getInt(ARGS_INSTANCE);
         }
 
-
+/*
         lv = (ListView) rootView.findViewById(R.id.frag1list);
 
-         adapter = new CustomAdapterEvents(this.getActivity(),getEvents());
+        adapter = new CustomAdapterEvents(this.getActivity(),getEvents());
 
-        lv.setAdapter(adapter);
+        lv.setAdapter(adapter);*/
 
         return rootView;
 
@@ -91,18 +144,20 @@ public class HomeFragment extends BaseFragment {
 
                 if (mFragmentNavigation != null) {
 
-                    mFragmentNavigation.pushFragment(CodeItOut.newInstance(fragCount+1));
+                    mFragmentNavigation.pushFragment(Codex.newInstance(fragCount+1));
 
                 }
             }
         });
+
+        /*
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(view.getContext(),"Working",Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
       /*  Event_Data ed = (Event_Data) lv.getSelectedItem();
 
