@@ -65,19 +65,22 @@ public class CustomAdapterContacts extends BaseAdapter {
         ImageView img1 = (ImageView) view.findViewById(R.id.contact_image);
         TextView numbertxt = (TextView) view.findViewById(R.id.desig);
         ImageView img2 = (ImageView) view.findViewById(R.id.call_image);
+        TextView desig = (TextView) view.findViewById(R.id.desig1);
 
 
         final String name = arrayContacts.get(i).getName();
         final String number = arrayContacts.get(i).getNumber();
         int image1 = arrayContacts.get(i).getImage1();
         int image2 = arrayContacts.get(i).getImage2();
+        final String designa = arrayContacts.get(i).getDesig();
 
         nametxt.setText(name);
         numbertxt.setText(number);
         img1.setImageResource(image1);
         img2.setImageResource(image2);
+        desig.setText(designa);
 
-        Bitmap bitmap1 = BitmapFactory.decodeResource(view.getResources(),R.drawable.tab_profile);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(view.getResources(),image1);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(view.getResources(),bitmap1);
         rbd1.setCircular(true);
         img1.setImageDrawable(rbd1);

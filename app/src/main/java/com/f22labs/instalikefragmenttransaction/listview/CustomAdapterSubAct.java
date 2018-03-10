@@ -30,6 +30,8 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+
 /**
  * Created by prage on 3/9/2018.
  */
@@ -38,11 +40,16 @@ public class CustomAdapterSubAct extends BaseAdapter {
     Context c;
     ArrayList<SubActData> subAct;
     LayoutInflater inflater;
+    @BindView(R.id.subactimage)
+    public ImageView subactimage;
 
-    public CustomAdapterSubAct(Context c , ArrayList<SubActData> subAct)
+    public TextView subacttext;
+
+    public CustomAdapterSubAct(Context c , ArrayList<SubActData> subAct , View view)
     {
         this.c = c;
         this.subAct = subAct;
+        this.subactimage = (ImageView) view.findViewById(R.id.subactimage);
     }
 
     @Override
@@ -73,8 +80,8 @@ public class CustomAdapterSubAct extends BaseAdapter {
 
         }
 
-        final TextView subacttext= (TextView)view.findViewById(R.id.subacttext);
-        final ImageView subactimage = (ImageView) view.findViewById(R.id.subactimage);
+        subacttext= (TextView)view.findViewById(R.id.subacttext);
+        subactimage = (ImageView) view.findViewById(R.id.subactimage);
 
 
         final String name1 = subAct.get(i).getName1();
@@ -95,24 +102,6 @@ public class CustomAdapterSubAct extends BaseAdapter {
                 ((TransitionDrawable) subactimage.getDrawable()).startTransition(3000);
             }
         });*/
-
-        TextView textView = (TextView) view.findViewById(R.id.subacttext);
-
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(name1.equalsIgnoreCase("top coder event"))
-                {
-                    Toast.makeText(c,"Top Coder Event",Toast.LENGTH_SHORT).show();
-                    MainActivity ma = new MainActivity();
-                    TopCoder topCoder = new TopCoder();
-                    BaseFragment.mFragmentNavigation.pushFragment(topCoder.newInstance(4));
-
-                }
-            }
-        });
-
-
         return view;
     }
 

@@ -18,7 +18,6 @@
         android:padding="5dp"
         android:layout_margin="20dp"
         android:clickable="true"
-        android:transitionName="simple_trans"
         />
 
         <TextView

@@ -5,6 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.transition.Explode;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
@@ -31,7 +34,7 @@ import butterknife.ButterKnife;
 public class HomeFragment extends BaseFragment {
 
 
-    @BindView(R.id.btn_click_me)
+
     Button btnClickMe;
     ListView lv;
     CustomAdapterEvents adapter;
@@ -78,7 +81,19 @@ public class HomeFragment extends BaseFragment {
 
         gridView = (GridView) rootView.findViewById(R.id.gridView);
         gridAdapter = new GridVIewAdapter(this.getContext(), R.layout.grid_item_layout, getData());
+
         gridView.setAdapter(gridAdapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+               if(i==0 && mFragmentNavigation!=null)
+               {
+                   mFragmentNavigation.pushFragment(CodeItOut.newInstance(0));
+                   ((MainActivity)getActivity()).updateToolbarTitle("Code It Out");
+               }
+            }
+        });
 
         /*
         lv = (ListView) rootView.findViewById(R.id.frag1list);
@@ -101,7 +116,7 @@ public class HomeFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        btnClickMe.setOnClickListener(new View.OnClickListener() {
+      /*  btnClickMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -111,12 +126,9 @@ public class HomeFragment extends BaseFragment {
 
                 }
             }
-        });
+        });*/
 
-
-
-        ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" :"Sub Home" + (fragCount + 1));
-
+         ((MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" :"Sub Home" + (fragCount + 1));
     }
 
     @Override
@@ -149,11 +161,24 @@ public class HomeFragment extends BaseFragment {
             imageItems.add(new ImageItem(bitmap, "Image#" + i));
         }*/
 
-       ImageItem id = new ImageItem(R.drawable.logo1,"Category1");
+       ImageItem id = new ImageItem(R.drawable.logo1,"Code It Out");
         imageItems.add(id);
-        id = new ImageItem(R.drawable.logo1,"Category2");
+        id = new ImageItem(R.drawable.logo1,"Fry The Bread Board");
+        imageItems.add(id);
+        id = new ImageItem(R.drawable.logo1,"Fun with Bots");
+        imageItems.add(id);
+        id = new ImageItem(R.drawable.logo1,"Present And Exhibit");
+        imageItems.add(id);
+        id = new ImageItem(R.drawable.logo1,"ECell and Management");
+        imageItems.add(id);
+        id = new ImageItem(R.drawable.logo1,"Animated");
+        imageItems.add(id);
+        id = new ImageItem(R.drawable.logo1,"Quizical.ly");
+        imageItems.add(id);
+        id = new ImageItem(R.drawable.logo1,"Why So Serious??");
         imageItems.add(id);
 
         return imageItems;
     }
+
 }

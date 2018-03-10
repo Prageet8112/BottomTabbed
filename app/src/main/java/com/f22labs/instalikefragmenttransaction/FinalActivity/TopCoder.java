@@ -30,7 +30,7 @@ public class TopCoder extends BaseFragment {
 
         ButterKnife.bind(this, rootView);
 
-        ImageView img1 = (ImageView) rootView.findViewById(R.id.eventcropimage1);
+        ImageView img1 = (ImageView) rootView.findViewById(R.id.subactimage1);
 
         Bitmap bitmap1 = BitmapFactory.decodeResource(rootView.getResources(),R.drawable.logo1);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(rootView.getResources(),bitmap1);

@@ -2,6 +2,10 @@ package com.f22labs.instalikefragmenttransaction.listview;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +46,8 @@ public class GridVIewAdapter extends ArrayAdapter {
             holder = new ViewHolder();
             holder.imageTitle = (TextView) row.findViewById(R.id.gridtext);
             holder.image = (ImageView) row.findViewById(R.id.gridimage);
+
+
             row.setTag(holder);
         } else {
             holder = (ViewHolder) row.getTag();
@@ -49,10 +55,18 @@ public class GridVIewAdapter extends ArrayAdapter {
 
         ImageItem item = (ImageItem) data.get(position);
 
+         Bitmap bitmap4 = BitmapFactory.decodeResource(context.getResources(),R.drawable.logo1);
+        RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(context.getResources(),bitmap4);
+        rbd1.setCircular(true);
+        holder.image.setImageDrawable(rbd1);
+
         holder.imageTitle.setText(item.getTitle());
-        holder.image.setImageResource(item.getImage());
+        //holder.image.setImageResource(item.getImage());
+
+
         return row;
     }
+
 
     static class ViewHolder {
         TextView imageTitle;

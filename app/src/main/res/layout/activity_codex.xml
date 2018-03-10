@@ -10,13 +10,12 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/eventcropimage1"
-        android:transitionName="simple_trans"
-
+        android:id="@+id/subactimage1"
+        android:transitionName="kittens"
         />
 
     <LinearLayout
-        android:layout_below="@id/eventcropimage1"
+        android:layout_below="@id/subactimage1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -28,6 +27,7 @@
             android:text="Rules and Regulations"
             android:textSize="30sp"
             android:textAlignment="center"
+            android:typeface="serif"
             android:textColor="@color/black"
             />
         <TextView

@@ -1,55 +1,51 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:weightSum="10"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+
+    >
 
 
-
-    <Button
-        android:id="@+id/btn_click_me"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/green"
-        android:gravity="center"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        android:text="@string/clickme"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:visibility="invisible"
-        android:layout_weight="0"
-        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
+        android:textAlignment="center"
+        android:id="@+id/techvibestext"
         android:text="TechVibes18"
         android:textSize="50dp"
-        android:textAlignment="center"
-        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="#FFFFFF"
+
         />
 
     <GridView
-        android:layout_weight="9"
+        android:layout_below="@id/techvibestext"
+        android:textFilterEnabled="true"
+        android:layout_weight="8.5"
         android:id="@+id/gridView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:columnWidth="100dp"
         android:drawSelectorOnTop="true"
         android:gravity="center"
-        android:numColumns="auto_fit"
+        android:numColumns="2"
         android:stretchMode="columnWidth"
         android:verticalSpacing="0dp"
-        android:focusable="true"
-        android:clickable="true"/>
+        android:clickable="true"
+        >
 
-
-
-</LinearLayout>
+    </GridView>
+</RelativeLayout>

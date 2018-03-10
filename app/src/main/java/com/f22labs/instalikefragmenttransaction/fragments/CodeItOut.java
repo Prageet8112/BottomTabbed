@@ -52,11 +52,15 @@ public class CodeItOut extends BaseFragment {
 }*/
 package com.f22labs.instalikefragmenttransaction.fragments;
 
+        import android.media.Image;
+        import android.os.Build;
         import android.os.Bundle;
         import android.support.annotation.Nullable;
         import android.support.v4.app.FragmentManager;
         import android.support.v4.view.ViewCompat;
         import android.support.v7.widget.Toolbar;
+        import android.transition.Fade;
+        import android.transition.Slide;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
@@ -68,6 +72,7 @@ package com.f22labs.instalikefragmenttransaction.fragments;
 
         import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
         import com.f22labs.instalikefragmenttransaction.Data.SubActData;
+        import com.f22labs.instalikefragmenttransaction.DetailsTransition;
         import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
         import com.f22labs.instalikefragmenttransaction.FinalActivity.TopCoder;
         import com.f22labs.instalikefragmenttransaction.R;
@@ -84,13 +89,9 @@ package com.f22labs.instalikefragmenttransaction.fragments;
 public class CodeItOut extends BaseFragment {
 
 
-    @BindView(R.id.btn1)
-    Button btnClickMe;
-    @BindView(R.id.btn2)
-    Button btnClickMe1;
     ListView lv;
     CustomAdapterSubAct adapter;
-
+    ImageView arr;
     int fragCount;
 
 
@@ -121,7 +122,9 @@ public class CodeItOut extends BaseFragment {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
+        arr = (ImageView) rootView.findViewById(R.id.subactimage2);
 
+        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
 
         ButterKnife.bind(this, rootView);
 
@@ -133,7 +136,7 @@ public class CodeItOut extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity(),getSubActivity());
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
 
         lv.setAdapter(adapter);
 
@@ -146,42 +149,72 @@ public class CodeItOut extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-       // final ImageView imageView = (ImageView) view.findViewById(R.id.subactimage1);
-        btnClickMe.setOnClickListener(new View.OnClickListener() {
+        arr.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+                Codex codex = Codex.newInstance(0);
 
-                if (mFragmentNavigation != null) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    codex.setSharedElementEnterTransition(new DetailsTransition());
+                    codex.setEnterTransition(new Fade());
+                    setExitTransition(new Fade());
+                    codex.setSharedElementReturnTransition(new DetailsTransition());
+                }
 
-                    mFragmentNavigation.pushFragment(Codex.newInstance(fragCount+1));
-                  //  Codex codex = Codex.newInstance(fragCount+1);
-                    /*getFragmentManager()
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .addSharedElement(arr, "kittens")
+                        .replace(R.id.relative1,codex)
+                        .addToBackStack(null)
+                        .commit();
+
+              //  mFragmentNavigation.pushFragment(codex);
+                ((MainActivity)getActivity()).updateToolbarTitle("Codex 2.0");
+            }
+        });
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if(i==0)
+                {
+                    Codex codex = Codex.newInstance(0);
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        codex.setSharedElementEnterTransition(new DetailsTransition());
+                        codex.setEnterTransition(new Slide());
+                        codex.setExitTransition(new Slide());
+                        codex.setSharedElementReturnTransition(new DetailsTransition());
+                    }
+
+                    getActivity().getSupportFragmentManager()
                             .beginTransaction()
-                            .addSharedElement(imageView, ViewCompat.getTransitionName(imageView))
-                            .addToBackStack((String)CodeItOut.class.getSimpleName())
-                            .replace(R.id.subactimage1, Codex.newInstance(fragCount+1))
-                            .commit();*/
+                            .addSharedElement(arr , "kittens")
+                            .replace(R.id.relative1,codex)
+                            .addToBackStack("This is ot")
+                            .commit();
 
-                    ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" : "SubHome" + (fragCount+1));
+                   //  mFragmentNavigation.pushFragment(codex);
+                    ((MainActivity)getActivity()).updateToolbarTitle("Codex 2.0");
 
                 }
-            }
-        });
+                if(i==2)
+                {
+                    TopCoder topCoder = TopCoder.newInstance(0);
 
-        btnClickMe1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        topCoder.setSharedElementEnterTransition(new DetailsTransition());
+                        topCoder.setEnterTransition(new Fade());
+                        setExitTransition(new Fade());
+                        topCoder.setSharedElementReturnTransition(new DetailsTransition());
+                    }
 
-                if (mFragmentNavigation != null) {
-
-                    mFragmentNavigation.pushFragment(TopCoder.newInstance(fragCount+2));
-                    ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" : "SubHome" + (fragCount+2));
+                    mFragmentNavigation.pushFragment(topCoder);
+                    ((MainActivity)getActivity()).updateToolbarTitle("Top Coder Event");
                 }
+
             }
         });
-
-
-
 
     }
 

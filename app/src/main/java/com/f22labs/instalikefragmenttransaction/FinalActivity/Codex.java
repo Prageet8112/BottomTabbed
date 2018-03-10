@@ -45,9 +45,6 @@ public class Codex extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
-        }
     }
 
     @Nullable
@@ -57,7 +54,7 @@ public class Codex extends BaseFragment {
 
         ButterKnife.bind(this, rootView);
 
-        ImageView img1 = (ImageView) rootView.findViewById(R.id.eventcropimage1);
+        ImageView img1 = (ImageView) rootView.findViewById(R.id.subactimage1);
 
         Bitmap bitmap1 = BitmapFactory.decodeResource(rootView.getResources(),R.drawable.login1);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(rootView.getResources(),bitmap1);
