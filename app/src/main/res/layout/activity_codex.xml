@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:id="@+id/eventcropimage1"
+        android:transitionName="simple_trans"
+
         />
 
     <LinearLayout
@@ -21,15 +23,35 @@
         >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rules and Regulations"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rule 1"
             />
+        <Button
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Download"
+            android:textColor="@color/black"
+            />
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Register"
+            android:textColor="@color/black"
+            />
+
 
 
 

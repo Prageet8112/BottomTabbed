@@ -1,19 +1,26 @@
 package com.f22labs.instalikefragmenttransaction.fragments;
 
+import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.transition.Explode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
+import com.f22labs.instalikefragmenttransaction.Data.ImageItem;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterEvents;
+import com.f22labs.instalikefragmenttransaction.listview.GridVIewAdapter;
 
 import java.util.ArrayList;
 
@@ -28,6 +35,8 @@ public class HomeFragment extends BaseFragment {
     Button btnClickMe;
     ListView lv;
     CustomAdapterEvents adapter;
+    private GridView gridView;
+    private GridVIewAdapter gridAdapter;
 
     int fragCount;
 
@@ -50,7 +59,6 @@ public class HomeFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
-
     }
 
     @Override
@@ -68,12 +76,20 @@ public class HomeFragment extends BaseFragment {
             fragCount = args.getInt(ARGS_INSTANCE);
         }
 
+        gridView = (GridView) rootView.findViewById(R.id.gridView);
+        gridAdapter = new GridVIewAdapter(this.getContext(), R.layout.grid_item_layout, getData());
+        gridView.setAdapter(gridAdapter);
 
+        /*
         lv = (ListView) rootView.findViewById(R.id.frag1list);
 
          adapter = new CustomAdapterEvents(this.getActivity(),getEvents());
 
         lv.setAdapter(adapter);
+        */
+
+
+
 
         return rootView;
 
@@ -96,46 +112,6 @@ public class HomeFragment extends BaseFragment {
                 }
             }
         });
-
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(view.getContext(),"Working",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-      /*  Event_Data ed = (Event_Data) lv.getSelectedItem();
-
-        final String selected1 = ed.getName1();
-        final String selected2 = ed.getName2();
-
-
-
-      //  Toast.makeText(view.getContext(),selected1 + " " + selected2 , Toast.LENGTH_SHORT);
-
-         /*lv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              /*  if(selected1.equalsIgnoreCase("code it out"))
-                {
-                    Toast.makeText(view.getContext(),selected1 + " " + selected2 , Toast.LENGTH_SHORT);
-                }
-            }
-        });*/
-
-      /*  view.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                if(selected2.equalsIgnoreCase("animated"))
-                {
-                 //   mFragmentNavigation.pushFragment(HomeFragment.newInstance(fragCount + 1));
-                    Toast.makeText(view.getContext(),selected1 + " " + selected2 , Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        */
-
 
 
 
@@ -163,5 +139,21 @@ public class HomeFragment extends BaseFragment {
 
         return arrayEvents;
 
+    }
+
+    private ArrayList<ImageItem> getData() {
+        final ArrayList<ImageItem> imageItems = new ArrayList<>();
+       /* TypedArray imgs = getResources().obtainTypedArray(R.array.image_ids);
+        for (int i = 0; i < imgs.length(); i++) {
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), imgs.getResourceId(i, -1));
+            imageItems.add(new ImageItem(bitmap, "Image#" + i));
+        }*/
+
+       ImageItem id = new ImageItem(R.drawable.logo1,"Category1");
+        imageItems.add(id);
+        id = new ImageItem(R.drawable.logo1,"Category2");
+        imageItems.add(id);
+
+        return imageItems;
     }
 }

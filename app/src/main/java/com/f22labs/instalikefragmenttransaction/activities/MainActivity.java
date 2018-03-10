@@ -1,5 +1,6 @@
 package com.f22labs.instalikefragmenttransaction.activities;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -9,12 +10,16 @@ import android.support.v4.graphics.BitmapCompat;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.f22labs.instalikefragmenttransaction.LoginActivity;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.fragments.BaseFragment;
 import com.f22labs.instalikefragmenttransaction.fragments.NewsFragment;
@@ -25,6 +30,9 @@ import com.f22labs.instalikefragmenttransaction.fragments.SearchFragment;
 import com.f22labs.instalikefragmenttransaction.utils.FragmentHistory;
 import com.f22labs.instalikefragmenttransaction.utils.Utils;
 import com.f22labs.instalikefragmenttransaction.views.FragNavController;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.BindArray;
 import butterknife.BindView;
@@ -32,6 +40,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements BaseFragment.FragmentNavigation, FragNavController.TransactionListener, FragNavController.RootFragmentListener {
 
+    DatabaseReference dara;
 
     @BindView(R.id.content_frame)
     FrameLayout contentFrame;
@@ -62,7 +71,10 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+     /*   dara= FirebaseDatabase.getInstance().getReference("Entry");
+        dara.push().child("sub").setValue(true);
+        Log.d("dryrun", "end");
+*/
         ButterKnife.bind(this);
 
 
@@ -182,13 +194,15 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-
-
+            case R.id.menuLogout:
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(this, LoginActivity.class));
             case android.R.id.home:
+                        onBackPressed();
+                        return true;
 
 
-                onBackPressed();
-                return true;
         }
 
 
@@ -315,9 +329,13 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 
 
     public void updateToolbarTitle(String title) {
-
-
         getSupportActionBar().setTitle(title);
+    }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflator=getMenuInflater();
+        inflator.inflate(R.menu.menu, menu);
+
+        return true;
     }
 }

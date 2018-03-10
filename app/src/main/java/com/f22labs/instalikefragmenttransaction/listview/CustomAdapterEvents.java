@@ -14,8 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
+import com.f22labs.instalikefragmenttransaction.fragments.BaseFragment;
 import com.f22labs.instalikefragmenttransaction.fragments.CodeItOut;
 
 import java.util.ArrayList;
@@ -24,7 +26,7 @@ import java.util.ArrayList;
  * Created by prage on 3/7/2018.
  */
 
-public class CustomAdapterEvents extends BaseAdapter {
+public class CustomAdapterEvents extends BaseAdapter  {
 
     Context c;
     ArrayList<Event_Data> events;
@@ -67,9 +69,9 @@ public class CustomAdapterEvents extends BaseAdapter {
 
 
         final TextView nametxt1= (TextView)view.findViewById(R.id.eventname1);
-        ImageView img1 = (ImageView) view.findViewById(R.id.event1);
-        TextView nametxt2= (TextView)view.findViewById(R.id.eventname2);
-        ImageView img2 = (ImageView) view.findViewById(R.id.event2);
+        final ImageView img1 = (ImageView) view.findViewById(R.id.event1);
+        final TextView nametxt2= (TextView)view.findViewById(R.id.eventname2);
+        final ImageView img2 = (ImageView) view.findViewById(R.id.event2);
 
 
 
@@ -103,10 +105,11 @@ public class CustomAdapterEvents extends BaseAdapter {
                    Toast.makeText(c,"Code It Out",Toast.LENGTH_SHORT).show();
                     MainActivity ma = new MainActivity();
                     CodeItOut cd = new CodeItOut();
-                    ma.pushFragment(cd);
+                    BaseFragment.mFragmentNavigation.pushFragment(cd.newInstance(2));
 
 
                }
+
                if(name1.equalsIgnoreCase("fun with bots"))
                {
                    Toast.makeText(c,"Fun With Bots",Toast.LENGTH_SHORT).show();
