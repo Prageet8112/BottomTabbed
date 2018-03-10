@@ -53,11 +53,12 @@ public class ShareFragment extends BaseFragment{
     private ArrayList<Contact_Data> getContacts()
     {
         ArrayList<Contact_Data> arrayContacts = new ArrayList<>();
-
-        Contact_Data cd = new Contact_Data("Prageet N. Gupta","Head Coordinator",R.drawable.tab_profile,R.drawable.call);
-        arrayContacts.add(cd);
+        Contact_Data cd;
 
         cd = new Contact_Data("Prageet N. Gupta","Head Coordinator",R.drawable.tab_profile,R.drawable.call);
+        arrayContacts.add(cd);
+
+        cd = new Contact_Data("Deepesh gupta","Head Coordinator",R.drawable.tab_profile,R.drawable.call);
         arrayContacts.add(cd);
         cd = new Contact_Data("Prageet N. Gupta","Head Coordinator",R.drawable.tab_profile,R.drawable.call);
         arrayContacts.add(cd);

@@ -4,6 +4,11 @@
 
     </style>
 
+    <style name="ListFont" parent="@android:style/Widget.ListView">
+        <item name="android:textColor">#fff</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>

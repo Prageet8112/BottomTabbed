@@ -19,6 +19,9 @@
         <activity android:name=".Data.EventActivity" />
         <activity android:name=".fragments.CodeItOut" />
         <activity android:name=".FinalActivity.Codex"></activity>
+        <activity android:name=".fragments.ShareFragment" android:theme="@style/ListFont"></activity>
+
+
     </application>
 
 </manifest>
