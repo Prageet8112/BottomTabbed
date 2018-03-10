@@ -1,15 +1,22 @@
 package com.f22labs.instalikefragmenttransaction.FinalActivity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,9 +37,17 @@ import static com.f22labs.instalikefragmenttransaction.fragments.BaseFragment.AR
 
 public class Codex extends BaseFragment {
 
+    @BindView(R.id.download)
+    Button download;
+    @BindView(R.id.register)
+    Button register;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
+        }
     }
 
     @Nullable
@@ -42,7 +57,32 @@ public class Codex extends BaseFragment {
 
         ButterKnife.bind(this, rootView);
 
+        ImageView img1 = (ImageView) rootView.findViewById(R.id.eventcropimage1);
+
+        Bitmap bitmap1 = BitmapFactory.decodeResource(rootView.getResources(),R.drawable.login1);
+        RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(rootView.getResources(),bitmap1);
+        rbd1.setCircular(true);
+        img1.setImageDrawable(rbd1);
+
+        download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),"Download",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),"Register",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
         return rootView;
+
+
     }
 
     public static Codex newInstance(int instance) {

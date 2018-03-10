@@ -11,6 +11,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/violet</item>
         <item name="actionMenuTextColor">@color/violet</item>
+        <item name="android:windowContentTransitions">true</item>
 
     </style>
 

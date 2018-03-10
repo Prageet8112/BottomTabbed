@@ -9,6 +9,26 @@
         <item>My Activity</item>
 
     </array>
+    <string name="orline">--------------------------------------OR---------------------------------------</string>
+    <string name="branch">Branch</string>
+    <string name="sem">Semester</string>
+    <string-array name="branch">
+        <item>BE-CSE</item>
+        <item>BE-ECE</item>
+        <item>BE-EEE</item>
+        <item>BBA</item>
+        <item>BCA</item>
+        <item>MCA</item>
+        <item>MBA</item>
+    </string-array>
+
+    <string-array name="semester">
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+
+    </string-array>
 
 
 </resources>

@@ -54,19 +54,26 @@ package com.f22labs.instalikefragmenttransaction.fragments;
 
         import android.os.Bundle;
         import android.support.annotation.Nullable;
+        import android.support.v4.app.FragmentManager;
+        import android.support.v4.view.ViewCompat;
+        import android.support.v7.widget.Toolbar;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
         import android.widget.AdapterView;
         import android.widget.Button;
+        import android.widget.ImageView;
         import android.widget.ListView;
         import android.widget.Toast;
 
         import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
+        import com.f22labs.instalikefragmenttransaction.Data.SubActData;
         import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
+        import com.f22labs.instalikefragmenttransaction.FinalActivity.TopCoder;
         import com.f22labs.instalikefragmenttransaction.R;
         import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
         import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterEvents;
+        import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
 
         import java.util.ArrayList;
 
@@ -79,8 +86,10 @@ public class CodeItOut extends BaseFragment {
 
     @BindView(R.id.btn1)
     Button btnClickMe;
+    @BindView(R.id.btn2)
+    Button btnClickMe1;
     ListView lv;
-    CustomAdapterEvents adapter;
+    CustomAdapterSubAct adapter;
 
     int fragCount;
 
@@ -121,12 +130,12 @@ public class CodeItOut extends BaseFragment {
             fragCount = args.getInt(ARGS_INSTANCE);
         }
 
-/*
-        lv = (ListView) rootView.findViewById(R.id.frag1list);
 
-        adapter = new CustomAdapterEvents(this.getActivity(),getEvents());
+        lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        lv.setAdapter(adapter);*/
+        adapter = new CustomAdapterSubAct(this.getActivity(),getSubActivity());
+
+        lv.setAdapter(adapter);
 
         return rootView;
 
@@ -137,7 +146,7 @@ public class CodeItOut extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
+       // final ImageView imageView = (ImageView) view.findViewById(R.id.subactimage1);
         btnClickMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,56 +154,34 @@ public class CodeItOut extends BaseFragment {
                 if (mFragmentNavigation != null) {
 
                     mFragmentNavigation.pushFragment(Codex.newInstance(fragCount+1));
+                  //  Codex codex = Codex.newInstance(fragCount+1);
+                    /*getFragmentManager()
+                            .beginTransaction()
+                            .addSharedElement(imageView, ViewCompat.getTransitionName(imageView))
+                            .addToBackStack((String)CodeItOut.class.getSimpleName())
+                            .replace(R.id.subactimage1, Codex.newInstance(fragCount+1))
+                            .commit();*/
+
+                    ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" : "SubHome" + (fragCount+1));
 
                 }
             }
         });
 
-        /*
-
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        btnClickMe1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(view.getContext(),"Working",Toast.LENGTH_SHORT).show();
-            }
-        });*/
+            public void onClick(View v) {
 
-      /*  Event_Data ed = (Event_Data) lv.getSelectedItem();
+                if (mFragmentNavigation != null) {
 
-        final String selected1 = ed.getName1();
-        final String selected2 = ed.getName2();
-
-
-
-      //  Toast.makeText(view.getContext(),selected1 + " " + selected2 , Toast.LENGTH_SHORT);
-
-         /*lv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              /*  if(selected1.equalsIgnoreCase("code it out"))
-                {
-                    Toast.makeText(view.getContext(),selected1 + " " + selected2 , Toast.LENGTH_SHORT);
-                }
-            }
-        });*/
-
-      /*  view.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                if(selected2.equalsIgnoreCase("animated"))
-                {
-                 //   mFragmentNavigation.pushFragment(HomeFragment.newInstance(fragCount + 1));
-                    Toast.makeText(view.getContext(),selected1 + " " + selected2 , Toast.LENGTH_SHORT).show();
+                    mFragmentNavigation.pushFragment(TopCoder.newInstance(fragCount+2));
+                    ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" : "SubHome" + (fragCount+2));
                 }
             }
         });
-        */
 
 
 
-
-        ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" :"Sub Home" + (fragCount + 1));
 
     }
 
@@ -203,20 +190,26 @@ public class CodeItOut extends BaseFragment {
         super.onDestroyView();
     }
 
-    private ArrayList<Event_Data> getEvents()
+    private ArrayList<SubActData> getSubActivity()
     {
-        ArrayList<Event_Data> arrayEvents = new ArrayList<>();
+        ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        Event_Data ed = new Event_Data("Code it Out",R.drawable.login1,"Fry the Bread Board",R.drawable.login1);
+        SubActData ed = new SubActData("Freshers Code Zone",R.drawable.login1);
         arrayEvents.add(ed);
-        ed = new Event_Data("Fun with Bots",R.drawable.login1,"Present And Exhibit",R.drawable.login1);
+
+        ed = new SubActData("Codex 3.0",R.drawable.login1);
         arrayEvents.add(ed);
-        ed = new Event_Data("ECell ",R.drawable.login1,"Animated",R.drawable.login1);
-        arrayEvents.add(ed);
-        ed = new Event_Data("Quizacal.ly",R.drawable.login1,"Why so Serious??",R.drawable.login1);
+        ed = new SubActData("Top Coder Event",R.drawable.login1);
         arrayEvents.add(ed);
 
         return arrayEvents;
 
     }
+
+    public FragmentManager send()
+    {
+        FragmentManager fg = getFragmentManager();
+        return fg;
+    }
+
 }

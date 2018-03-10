@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/login2">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/emailadr"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:alpha=".7"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_username1"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textEmailAddress"
+        android:textColor="#fff"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/emailadr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@android:color/transparent"
+        android:alpha=".7"
+        android:drawablePadding="12dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email Address"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        android:drawableLeft="@drawable/ic_email1"
+        android:layout_above="@+id/mobile"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentLeft="true" />
+
+
+    <Button
+        android:id="@+id/SignUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textColor="#fff"
+        android:padding="16dp"
+        android:background="@drawable/background_login"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        android:drawableLeft="@drawable/ic_contact1"
+        android:ems="10"
+        android:hint="Mobile Number "
+        android:inputType="phone"
+        android:layout_above="@+id/rollno"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/rollno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        android:drawableLeft="@drawable/ic_roll_1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Roll Number"
+        android:layout_above="@+id/branch"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentLeft="true" />
+
+    <Spinner
+        android:id="@+id/branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/branch"
+        android:visibility="visible"
+        android:background="@android:color/holo_blue_light"
+        android:layout_marginBottom="40dp"
+        android:layout_alignBottom="@+id/sem"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <Spinner
+        android:id="@+id/sem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:entries="@array/semester"
+        android:visibility="visible"
+        android:layout_marginBottom="12dp"
+        android:layout_above="@+id/password"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="password"
+        android:drawableLeft="@drawable/ic_pass"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        android:drawablePadding="12dp"
+        android:layout_above="@+id/pass2"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/pass2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/ic_pass"
+        android:hint="Confirm Password"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        android:inputType="textPassword"
+        android:layout_marginBottom="56dp"
+        android:layout_above="@+id/SignUpButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/emailadr"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        app:srcCompat="@drawable/logo3" />
+
+
+</RelativeLayout>
