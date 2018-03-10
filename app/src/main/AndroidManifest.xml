@@ -25,6 +25,9 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".fragments.CodeItOut" />
         <activity android:name=".FinalActivity.Codex"></activity>
+        <activity android:name=".fragments.ShareFragment" android:theme="@style/ListFont"></activity>
+
+
     </application>
 
 </manifest>

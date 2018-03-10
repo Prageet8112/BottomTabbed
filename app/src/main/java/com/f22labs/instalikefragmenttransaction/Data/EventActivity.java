@@ -24,7 +24,7 @@ public class EventActivity extends AppCompatActivity {
         TextView nametxt2= (TextView)findViewById(R.id.eventname2);
         ImageView img2 = (ImageView) findViewById(R.id.event2);
 
-        Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(),R.drawable.bg1);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(),R.drawable.bg6);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(getResources(),bitmap1);
         rbd1.setCircular(true);
         img1.setImageDrawable(rbd1);

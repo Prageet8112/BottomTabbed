@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">TechVibes</string>
     <string name="clickme">CLICK ME</string>
+    <string name="dashboard">DASHBOARD</string>
+    <string name="prageet"><font color="#fff">Prageet Gupta</font></string>
 
     <array name="tab_name">
         <item>Home</item>

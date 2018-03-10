@@ -1,12 +1,17 @@
 package com.f22labs.instalikefragmenttransaction.fragments;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
@@ -17,11 +22,6 @@ import butterknife.ButterKnife;
 
 
 public class NewsFragment extends BaseFragment{
-
-
-
-    @BindView(R.id.btn_click_me)
-    Button btnClickMe;
 
     int fragCount;
 
@@ -41,6 +41,7 @@ public class NewsFragment extends BaseFragment{
         super.onCreate(savedInstanceState);
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -55,6 +56,12 @@ public class NewsFragment extends BaseFragment{
             fragCount = args.getInt(ARGS_INSTANCE);
         }
 
+        ImageView img1 = (ImageView) view.findViewById(R.id.user_profile);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(view.getResources(),R.drawable.user_icon);
+        RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(view.getResources(),bitmap1);
+        rbd1.setCircular(true);
+        img1.setImageDrawable(rbd1);
+
 
 
         return view;
@@ -66,7 +73,7 @@ public class NewsFragment extends BaseFragment{
         super.onViewCreated(view, savedInstanceState);
 
 
-        btnClickMe.setOnClickListener(new View.OnClickListener() {
+    /*    btnClickMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mFragmentNavigation != null) {
@@ -79,6 +86,7 @@ public class NewsFragment extends BaseFragment{
 
 
         ( (MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "MyActivity" : "Sub News "+fragCount);
+        */
 
 
     }
