@@ -67,7 +67,7 @@ public class SplashScreen extends Activity {
                     if(!hasLoggedIn)
                     {
                         Log.d("HOWZAA","Wooooooooooing");
-                        Intent it = new Intent(SplashScreen.this, LoginActivity.class);
+                        Intent it = new Intent(SplashScreen.this, IntroActivity.class);
                         startActivity(it);
                         SplashScreen.this.finish();
                     }

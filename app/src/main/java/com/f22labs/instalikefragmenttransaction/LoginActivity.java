@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Password=(EditText)findViewById(R.id.password);
         p=(ProgressBar)findViewById(R.id.progress);
         getSupportActionBar().hide();
-        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        ImageView imageView = (ImageView) findViewById(R.id.imageView11);
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.logo3);
         RoundedBitmapDrawable rbd = RoundedBitmapDrawableFactory.create(getResources(),bitmap);
         rbd.setCircular(true);
