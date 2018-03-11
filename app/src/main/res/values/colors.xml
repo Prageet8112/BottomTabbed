@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#002633</color>
-    <color name="colorPrimaryDark">#002633</color>
+    <color name="colorPrimaryDark">@color/grey_trans</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="fab_pressed">#546e7a</color>
+
 
     <color name="yellow">#F6A623</color>
 
@@ -29,6 +29,7 @@
     <!--shimmer-->
     <color name="demo_light_transparent">#16000000</color>
     <color name="demo_dark_transparent">#24000000</color>
+    <color name="view">#f6e9e0</color>
 
 
 
@@ -43,4 +44,17 @@
 
 
     <color name="green">#70c050</color>
+
+    <color name="bg_screen1">#b12515</color>
+    <color name="bg_screen2">#FFBB00</color>
+    <color name="bg_screen3">#74a443</color>
+
+    <!-- dots active colors -->
+    <color name="dot_active">#000000</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_inactive">#cccccc</color>
+
+
 </resources>
