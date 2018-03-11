@@ -34,7 +34,7 @@
             android:id="@+id/finalacttitile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Codex 2.0"
+            android:text="Ideate"
             android:textSize="30sp"
             android:textAlignment="center"
             android:typeface="serif"
@@ -45,19 +45,16 @@
             android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Love doing programming? Love solving interesting and challenging problems? Do you want Topcoder goodies? So fasten your seat belts because you should not miss out on this Topcoder contest. Topcoder Contest is an intra-college coding competition. The platform used for the event will be Topcoder. It will be open for all and no registration fee is required; all you need is a topcoder account."
+            android:text="Ever had an idea that was simple at a glance, resourceful at a second observation and possibly revolutionary in foresight? Any piece of technology that the world wields today came into existence after the genesis of an ‘idea’. This techvibes, IDEATE invites you to put forth your idea and win the opportunity to turn it into reality. The contest is open to a broad range of ideas and solutions."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
-
         <TextView
-            android:id="@+id/rules"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rules and Regulations"
-            android:textSize="30sp"
+            android:text="Preliminary Round:"
+            android:textSize="25sp"
             android:padding="10dp"
-            android:textAlignment="center"
             android:typeface="serif"
             android:textColor="@color/white"
             />
@@ -66,7 +63,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1. Please refrain from discussing strategy during the contest."
+            android:text="Illustrate two aspects of the idea – the raw idea and the guesstimate of how it can be materialised using existing technology and resources."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -75,31 +72,76 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2. Any case of code plagiarism will result in disqualification of both the users from the contest. We've a fairly good plagiarism detector that works at the opcode level."
+            android:text="Maximum team size is 4."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The submission is to be made by March 12, 2018."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evaluation Criteria: Originality of the idea. Flexibility in terms of use. Ease of implementation."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The best 5 will make it to the next round."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Second and Final Round:"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            />
+        <TextView
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3. You will code directly on Topcoder applet or Web Arena."
+            android:text="The participants are expected to exhibit their idea with the means of a power point presentation or a prototype(working model)."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maximum time for presentation is 8 minutes."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The winner and runner-up teams will get Certificates and exciting prizes and vouchers."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
 
-        <TextView
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4. Languages supported: C++, Python, Java, C#."
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
+
 
         <TextView
             android:id="@+id/textView"
@@ -122,7 +164,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Puru Raj Jain"
+                android:text="Rajat Jain"
                 android:layout_weight="5"
                 android:textSize="20sp"
                 android:textColor="@color/white"
@@ -135,7 +177,7 @@
                 android:layout_weight="5"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:text="+91-9414268529"
+                android:text="+91-9414000236"
                 android:id="@+id/con1"
                 android:clickable="true"
                 />
@@ -155,7 +197,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:text="Sanjay Singh"
+                android:text="Jitendra Asawa"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -166,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:clickable="true"
-                android:text="+91-9929959939"
+                android:text="+91-7976681113"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />

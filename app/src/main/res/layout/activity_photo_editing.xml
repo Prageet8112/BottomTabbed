@@ -34,7 +34,7 @@
             android:id="@+id/finalacttitile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Codex 2.0"
+            android:text="Photo Editing"
             android:textSize="30sp"
             android:textAlignment="center"
             android:typeface="serif"
@@ -45,7 +45,7 @@
             android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Love doing programming? Love solving interesting and challenging problems? Do you want Topcoder goodies? So fasten your seat belts because you should not miss out on this Topcoder contest. Topcoder Contest is an intra-college coding competition. The platform used for the event will be Topcoder. It will be open for all and no registration fee is required; all you need is a topcoder account."
+            android:text="A picture is worth a thousand words and when such multiple pictures are combined,the message is communicated unmistakably. That is the power of photo editing ."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -66,7 +66,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1. Please refrain from discussing strategy during the contest."
+            android:text="1. Participants will combine and manipulate the pictures on the spot within given time."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -75,7 +75,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2. Any case of code plagiarism will result in disqualification of both the users from the contest. We've a fairly good plagiarism detector that works at the opcode level."
+            android:text="2. Participants will have to carry their own set of references and pictures(that will be edited)."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -85,7 +85,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3. You will code directly on Topcoder applet or Web Arena."
+            android:text="3. The outcome must be relevant with the given theme and should convey some message/story."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -96,7 +96,7 @@
             android:paddingBottom="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4. Languages supported: C++, Python, Java, C#."
+            android:text="4. The artwork should not be copied or minimally edited."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -122,7 +122,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Puru Raj Jain"
+                android:text="Ashish Vijayvargiya"
                 android:layout_weight="5"
                 android:textSize="20sp"
                 android:textColor="@color/white"
@@ -135,7 +135,7 @@
                 android:layout_weight="5"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:text="+91-9414268529"
+                android:text="+91-9024571971"
                 android:id="@+id/con1"
                 android:clickable="true"
                 />
@@ -155,7 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:text="Sanjay Singh"
+                android:text="Prerna Mittal"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -166,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:clickable="true"
-                android:text="+91-9929959939"
+                android:text="+91-8890063845"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />

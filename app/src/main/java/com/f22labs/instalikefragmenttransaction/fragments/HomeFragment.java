@@ -92,7 +92,43 @@ public class HomeFragment extends BaseFragment {
                    mFragmentNavigation.pushFragment(CodeItOut.newInstance(0));
                    ((MainActivity)getActivity()).updateToolbarTitle("Code It Out");
                }
+                if(i==1 && mFragmentNavigation!=null)
+                {
+                    mFragmentNavigation.pushFragment(FryTheBreadBoard.newInstance(0));
+                    ((MainActivity)getActivity()).updateToolbarTitle("Fry The Bread Board");
+                }
+                if(i==2 && mFragmentNavigation!=null)
+                {
+                    mFragmentNavigation.pushFragment(FunWithBots.newInstance(0));
+                    ((MainActivity)getActivity()).updateToolbarTitle("Fun With Bots");
+                }
+                if(i==3 && mFragmentNavigation!=null)
+                {
+                    mFragmentNavigation.pushFragment(PresentAndExhibit.newInstance(0));
+                    ((MainActivity)getActivity()).updateToolbarTitle("Present and Exhibit");
+                }
+                if(i==4 && mFragmentNavigation!=null)
+                {
+                    mFragmentNavigation.pushFragment(Ecell.newInstance(0));
+                    ((MainActivity)getActivity()).updateToolbarTitle("Ecell and Management");
+                }
+                if(i==5 && mFragmentNavigation!=null)
+                {
+                    mFragmentNavigation.pushFragment(Animated.newInstance(0));
+                    ((MainActivity)getActivity()).updateToolbarTitle("Animated");
+                }
+                if(i==6 && mFragmentNavigation!=null)
+                {
+                    mFragmentNavigation.pushFragment(Quiz.newInstance(0));
+                    ((MainActivity)getActivity()).updateToolbarTitle("Quiz");
+                }
+                if(i==7 && mFragmentNavigation!=null)
+                {
+                    mFragmentNavigation.pushFragment(WhySoSerious.newInstance(0));
+                    ((MainActivity)getActivity()).updateToolbarTitle("Why So Serious??");
+                }
             }
+
         });
 
         /*

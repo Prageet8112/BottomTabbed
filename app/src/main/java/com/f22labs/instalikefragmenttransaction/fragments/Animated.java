@@ -52,36 +52,34 @@ public class CodeItOut extends BaseFragment {
 }*/
 package com.f22labs.instalikefragmenttransaction.fragments;
 
-        import android.os.Build;
-        import android.os.Bundle;
-        import android.support.annotation.Nullable;
-        import android.support.v4.app.FragmentManager;
-        import android.transition.AutoTransition;
-        import android.transition.Explode;
-        import android.transition.Fade;
-        import android.transition.Slide;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.AdapterView;
-        import android.widget.ImageView;
-        import android.widget.ListView;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
+import android.transition.AutoTransition;
+import android.transition.Explode;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.ListView;
 
-        import com.f22labs.instalikefragmenttransaction.Data.SubActData;
-        import com.f22labs.instalikefragmenttransaction.DetailsTransition;
-        import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
-        import com.f22labs.instalikefragmenttransaction.FinalActivity.CodeWars3;
-        import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
-        import com.f22labs.instalikefragmenttransaction.R;
-        import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
-        import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
+import com.f22labs.instalikefragmenttransaction.Data.SubActData;
+import com.f22labs.instalikefragmenttransaction.DetailsTransition;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.CodeWars3;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
+import com.f22labs.instalikefragmenttransaction.R;
+import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
+import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
 
-        import java.util.ArrayList;
+import java.util.ArrayList;
 
-        import butterknife.ButterKnife;
+import butterknife.ButterKnife;
 
 
-public class CodeItOut extends BaseFragment {
+public class Animated extends BaseFragment {
 
 
     ListView lv;
@@ -90,16 +88,16 @@ public class CodeItOut extends BaseFragment {
     int fragCount;
 
 
-    public static CodeItOut newInstance(int instance) {
+    public static Animated newInstance(int instance) {
         Bundle args = new Bundle();
         args.putInt(ARGS_INSTANCE, instance);
-        CodeItOut fragment = new CodeItOut();
+        Animated fragment = new Animated();
         fragment.setArguments(args);
         return fragment;
     }
 
 
-    public CodeItOut() {
+    public Animated() {
         // Required empty public constructor
     }
 
@@ -118,7 +116,7 @@ public class CodeItOut extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.subact_item_layout, container, false);
+        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
 
         ButterKnife.bind(this, rootView);
 
@@ -160,13 +158,13 @@ public class CodeItOut extends BaseFragment {
 
                     getActivity().getSupportFragmentManager()
                             .beginTransaction()
-                            //.addSharedElement(adapter.subactimage , "kittens")
-                            //.replace(R.id.relative1,freshersCodeZone)
-                            //.addToBackStack("This is to")
+                         //   .addSharedElement(adapter.subactimage , "kittens")
+                           // .replace(R.id.relative1,freshersCodeZone)
+                           // .addToBackStack("This is to")
                             .commit();
 
-                     mFragmentNavigation.pushFragment(freshersCodeZone);
-                    ((MainActivity)getActivity()).updateToolbarTitle("Fresher's Code Zone");
+                      mFragmentNavigation.pushFragment(freshersCodeZone);
+                    ((MainActivity)getActivity()).updateToolbarTitle("Vibhor Gandhi Memorial");
 
                 }
 
@@ -189,7 +187,7 @@ public class CodeItOut extends BaseFragment {
                             .commit();
 
                      mFragmentNavigation.pushFragment(codex);
-                    ((MainActivity)getActivity()).updateToolbarTitle("Codex 2.0");
+                    ((MainActivity)getActivity()).updateToolbarTitle("Photo Editing");
 
                 }
 
@@ -205,7 +203,7 @@ public class CodeItOut extends BaseFragment {
                     }
 
                     mFragmentNavigation.pushFragment(codeWars3);
-                    ((MainActivity)getActivity()).updateToolbarTitle("Code Wars III");
+                    ((MainActivity)getActivity()).updateToolbarTitle("Movie Mania");
                 }
 
             }
@@ -222,12 +220,12 @@ public class CodeItOut extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Freshers Code Zone",R.drawable.login1);
+        SubActData ed = new SubActData("Vibhor Gandhi Memorial",R.drawable.login1);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Codex 2.0",R.drawable.login1);
+        ed = new SubActData("Photo Editing",R.drawable.login1);
         arrayEvents.add(ed);
-        ed = new SubActData("Code Wars III",R.drawable.login1);
+        ed = new SubActData("Movie Mania",R.drawable.login1);
         arrayEvents.add(ed);
 
         return arrayEvents;

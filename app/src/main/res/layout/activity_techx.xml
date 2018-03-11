@@ -34,7 +34,7 @@
             android:id="@+id/finalacttitile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Codex 2.0"
+            android:text="TechX"
             android:textSize="30sp"
             android:textAlignment="center"
             android:typeface="serif"
@@ -45,58 +45,15 @@
             android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Love doing programming? Love solving interesting and challenging problems? Do you want Topcoder goodies? So fasten your seat belts because you should not miss out on this Topcoder contest. Topcoder Contest is an intra-college coding competition. The platform used for the event will be Topcoder. It will be open for all and no registration fee is required; all you need is a topcoder account."
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
-
-        <TextView
-            android:id="@+id/rules"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Rules and Regulations"
-            android:textSize="30sp"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:typeface="serif"
-            android:textColor="@color/white"
-            />
-        <TextView
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1. Please refrain from discussing strategy during the contest."
+            android:text="An exhibition of all the projects, irrespective of branch; one can showcase any kind of project related to technology or science."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
         <TextView
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
+            android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2. Any case of code plagiarism will result in disqualification of both the users from the contest. We've a fairly good plagiarism detector that works at the opcode level."
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
-
-        <TextView
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3. You will code directly on Topcoder applet or Web Arena."
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
-
-        <TextView
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4. Languages supported: C++, Python, Java, C#."
+            android:text="This time the pictures should artfully depict Tech-Zenith, an era where technology is most powerful."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -122,7 +79,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Puru Raj Jain"
+                android:text="Anand Kumar"
                 android:layout_weight="5"
                 android:textSize="20sp"
                 android:textColor="@color/white"
@@ -135,7 +92,7 @@
                 android:layout_weight="5"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:text="+91-9414268529"
+                android:text="+91-8502946966"
                 android:id="@+id/con1"
                 android:clickable="true"
                 />
@@ -155,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:text="Sanjay Singh"
+                android:text="Vaibhav"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />

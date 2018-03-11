@@ -34,7 +34,7 @@
             android:id="@+id/finalacttitile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Codex 2.0"
+            android:text="RoboSoccer"
             android:textSize="30sp"
             android:textAlignment="center"
             android:typeface="serif"
@@ -45,7 +45,7 @@
             android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Love doing programming? Love solving interesting and challenging problems? Do you want Topcoder goodies? So fasten your seat belts because you should not miss out on this Topcoder contest. Topcoder Contest is an intra-college coding competition. The platform used for the event will be Topcoder. It will be open for all and no registration fee is required; all you need is a topcoder account."
+            android:text="Its football time and no-one plays soccer better than the engineers, in their own sophisticated way we hail this event ROBO SOCCER. All you soccer fans hold your breath, as we present to you soccer with an entirely new dimension. So if you are up for the challenge get your manual soccer playing bots ready in order to compete on the biggest stage and bring out the hidden RONALDO , MESSI in you...its time you to stop watching soccer on screens. Participate and have lots of fun it’s going to be thrilling for sure, enjoy the event!"
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -66,7 +66,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1. Please refrain from discussing strategy during the contest."
+            android:text="1. The duration of the game will be of 10 minutes."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -75,7 +75,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2. Any case of code plagiarism will result in disqualification of both the users from the contest. We've a fairly good plagiarism detector that works at the opcode level."
+            android:text="2. The final decision will be in the hands of the coordinator."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -85,7 +85,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3. You will code directly on Topcoder applet or Web Arena."
+            android:text="3. For soccer you can come along with you your own prepared bot."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -96,7 +96,43 @@
             android:paddingBottom="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4. Languages supported: C++, Python, Java, C#."
+            android:text="4. Any damages to bot or disrespect to any volunteers and co-ordinator will not be tolerated."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. Dragging or carrying of bot from wire is not allowed."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. The team with max no. of goals will win."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. A team can consist of 4 members."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8. There will be 2 boys provided to each team as STRIKER &amp; DEFENDER. The DEFENDER bot cannot cross the half line of the arena. However, the boys can be exchanged after half time."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -122,7 +158,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Puru Raj Jain"
+                android:text="Prachi Agarwal"
                 android:layout_weight="5"
                 android:textSize="20sp"
                 android:textColor="@color/white"
@@ -135,44 +171,12 @@
                 android:layout_weight="5"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:text="+91-9414268529"
+                android:text="+91-8586061195"
                 android:id="@+id/con1"
                 android:clickable="true"
                 />
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:paddingBottom="25dp"
-            android:layout_marginBottom="15dp"
-            android:orientation="horizontal"
-            android:weightSum="10">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:text="Sanjay Singh"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/con2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:clickable="true"
-                android:text="+91-9929959939"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
 
         <Button
             android:id="@+id/register"

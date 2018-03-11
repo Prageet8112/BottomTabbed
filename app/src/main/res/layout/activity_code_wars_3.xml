@@ -34,7 +34,7 @@
             android:id="@+id/finalacttitile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Codex 2.0"
+            android:text="Code Wars III"
             android:textSize="30sp"
             android:textAlignment="center"
             android:typeface="serif"
@@ -45,7 +45,7 @@
             android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Love doing programming? Love solving interesting and challenging problems? Do you want Topcoder goodies? So fasten your seat belts because you should not miss out on this Topcoder contest. Topcoder Contest is an intra-college coding competition. The platform used for the event will be Topcoder. It will be open for all and no registration fee is required; all you need is a topcoder account."
+            android:text="A competition for all the coders out there, this time on a new platform Aurora Online Judge. Get yourself prepared for the intensive coding event to be held on TechVibes'17. It will be a great learning experience for all the participants."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -85,18 +85,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3. You will code directly on Topcoder applet or Web Arena."
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
-
-        <TextView
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4. Languages supported: C++, Python, Java, C#."
+            android:text="3. No use of internet except for accessing Aurara platform."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
