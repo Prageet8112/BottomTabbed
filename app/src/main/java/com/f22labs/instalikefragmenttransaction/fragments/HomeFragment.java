@@ -1,13 +1,7 @@
 package com.f22labs.instalikefragmenttransaction.fragments;
 
-import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
-import android.transition.Explode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +9,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
 import com.f22labs.instalikefragmenttransaction.Data.ImageItem;
@@ -27,7 +19,6 @@ import com.f22labs.instalikefragmenttransaction.listview.GridVIewAdapter;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 

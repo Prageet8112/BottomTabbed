@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
-import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.fragments.BaseFragment;

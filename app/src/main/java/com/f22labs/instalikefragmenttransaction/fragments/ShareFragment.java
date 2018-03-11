@@ -1,22 +1,18 @@
 package com.f22labs.instalikefragmenttransaction.fragments;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.f22labs.instalikefragmenttransaction.Data.Contact_Data;
-import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterContacts;
-import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterEvents;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
