@@ -10,7 +10,7 @@ public class ContactsArray {
     private ArrayList<String> arrayList = new ArrayList<>();
 
     public ArrayList<String> getArrayList() {
-        arrayList.add("9024572325");
+        arrayList.add("9001788595");
         arrayList.add("9799301038");
         arrayList.add("9529245540");
         return arrayList;

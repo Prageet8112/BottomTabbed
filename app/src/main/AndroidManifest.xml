@@ -9,25 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".IntroActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".Data.EventActivity" />
+        <activity android:name=".activities.MainActivity" android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--<activity android:name=".LoginActivity"/>-->
         <activity android:name=".SignUpActivity" />
         <activity android:name=".fragments.CodeItOut" />
-        <activity android:name=".FinalActivity.Codex"></activity>
-        <activity android:name=".fragments.ShareFragment" android:theme="@style/ListFont"></activity>
+        <activity android:name=".FinalActivity.Codex" />
+       <!--<activity android:name=".activities.MainActivity" android:theme="@style/AppTheme.NoActionBar"/>-->
 
-
+      <!--  <activity android:name=".activities.MainActivity"/>
+-->
     </application>
 
 </manifest>
