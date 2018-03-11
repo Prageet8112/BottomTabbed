@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.f22labs.instalikefragmenttransaction.AppReminder;
 import com.f22labs.instalikefragmenttransaction.LoginActivity;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.fragments.BaseFragment;
@@ -198,6 +199,11 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
                 FirebaseAuth.getInstance().signOut();
                 finish();
                 startActivity(new Intent(this, LoginActivity.class));
+                break;
+            case R.id.menureminder:
+                Log.d("dryrun","here");
+                startActivity(new Intent(this,AppReminder.class));
+                break;
             case android.R.id.home:
                         onBackPressed();
                         return true;

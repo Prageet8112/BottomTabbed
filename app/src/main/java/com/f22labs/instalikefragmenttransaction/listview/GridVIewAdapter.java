@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import com.f22labs.instalikefragmenttransaction.Data.ImageItem;
 import com.f22labs.instalikefragmenttransaction.R;
-import com.f22labs.instalikefragmenttransaction.fragments.HomeFragment;
 
 import java.util.ArrayList;
 

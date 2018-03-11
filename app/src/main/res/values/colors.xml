@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#002633</color>
-    <color name="colorPrimaryDark">@color/grey_trans</color>
+    <color name="colorPrimaryDark">#002633</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="fab_pressed">#546e7a</color>
 
     <color name="yellow">#F6A623</color>
 
@@ -43,8 +43,4 @@
 
 
     <color name="green">#70c050</color>
-
-
-
-
 </resources>

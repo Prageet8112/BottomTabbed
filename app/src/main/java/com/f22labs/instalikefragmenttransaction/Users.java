@@ -15,4 +15,33 @@ public class Users {
         email=e;
         password=p;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getRoll() {
+        return roll;
+    }
+
+    public String getBranch() {
+        return branch;
+    }
+
+    public String getSem() {
+        return sem;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
 }

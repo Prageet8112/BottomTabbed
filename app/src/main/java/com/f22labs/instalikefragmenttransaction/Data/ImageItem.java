@@ -1,7 +1,5 @@
 package com.f22labs.instalikefragmenttransaction.Data;
 
-import android.graphics.Bitmap;
-
 /**
  * Created by prage on 3/10/2018.
  */

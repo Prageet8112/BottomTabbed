@@ -9,14 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+        <uses-permission android:name="android.permission.INTERNET" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity" android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -27,6 +23,31 @@
         <activity android:name=".FinalActivity.Codex"></activity>
         <activity android:name=".fragments.ShareFragment" android:theme="@style/ListFont"></activity>
 
+
+
+        <activity android:name=".LoginActivity">
+
+        </activity>
+        <activity android:name=".SplashScreen"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AppReminder" />
+        <activity android:name=".AddReminderActivity"></activity>
+        <provider
+            android:name=".DataRemainder.AlarmReminderProvider"
+            android:authorities="com.delaroystudios.alarmreminder"
+            android:exported="false" />
+
+        <service
+            android:name=".reminder.ReminderAlarmService"
+            android:exported="false" />
 
     </application>
 

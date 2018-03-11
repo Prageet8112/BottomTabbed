@@ -52,6 +52,7 @@
         android:id="@+id/LoginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:background="@drawable/background_login"
         android:text="Log in"
         android:textColor="#fff"
@@ -62,7 +63,7 @@
         android:layout_alignParentLeft="true" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imageView"
         android:layout_width="140dp"
         android:layout_height="120dp"
         android:layout_gravity="center_horizontal"
@@ -95,5 +96,12 @@
         android:layout_above="@+id/toSignUp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+    <ProgressBar
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
