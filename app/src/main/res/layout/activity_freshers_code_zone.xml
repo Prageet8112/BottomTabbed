@@ -34,7 +34,7 @@
             android:id="@+id/finalacttitile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Codex 2.0"
+            android:text="Fresher's Code Zone"
             android:textSize="30sp"
             android:textAlignment="center"
             android:typeface="serif"
@@ -45,7 +45,15 @@
             android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Love doing programming? Love solving interesting and challenging problems? Do you want Topcoder goodies? So fasten your seat belts because you should not miss out on this Topcoder contest. Topcoder Contest is an intra-college coding competition. The platform used for the event will be Topcoder. It will be open for all and no registration fee is required; all you need is a topcoder account."
+            android:text="Fresher's World is a competition designed specially for the budding programmers to test their skills and explore a new competitive environment. It will help the programmers to introspect themselves on where they stand among the other fellow competitors."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fresher's World is an intra-college coding competition. The platform used for the event will be HackerRank. It will be open for only first year students with no registration fee. All you need is a HackerRank account (the platform for contest) to get started."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -66,7 +74,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1. Please refrain from discussing strategy during the contest."
+            android:text="1. Only first year students can participate."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -75,7 +83,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2. Any case of code plagiarism will result in disqualification of both the users from the contest. We've a fairly good plagiarism detector that works at the opcode level."
+            android:text="2. Please refrain from discussing strategy during the contest."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -85,7 +93,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3. You will code directly on Topcoder applet or Web Arena."
+            android:text="3. No use of internet except for accessing HackerRank."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -96,7 +104,16 @@
             android:paddingBottom="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4. Languages supported: C++, Python, Java, C#."
+            android:text="4. Any case of code plagiarism will result in disqualification of both the users from the contest. We've a fairly good plagiarism detector that works at the opcode level."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. HackerRank admins decision will be final."
             android:textSize="20sp"
             android:textColor="@color/white"
             />

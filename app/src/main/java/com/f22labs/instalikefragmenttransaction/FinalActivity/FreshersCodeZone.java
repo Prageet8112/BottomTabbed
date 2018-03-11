@@ -9,14 +9,22 @@ import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.fragments.BaseFragment;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class TopCoder extends BaseFragment {
+public class FreshersCodeZone extends BaseFragment {
+
+    @BindView(R.id.download)
+    Button download;
+    @BindView(R.id.register)
+    Button register;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,26 +34,42 @@ public class TopCoder extends BaseFragment {
     @Nullable
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_codex, container, false);
+        View rootView = inflater.inflate(R.layout.activity_freshers_code_zone, container, false);
 
         ButterKnife.bind(this, rootView);
 
         ImageView img1 = (ImageView) rootView.findViewById(R.id.subactimage1);
 
-        Bitmap bitmap1 = BitmapFactory.decodeResource(rootView.getResources(),R.drawable.logo1);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(rootView.getResources(),R.drawable.login1);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(rootView.getResources(),bitmap1);
         rbd1.setCircular(true);
         img1.setImageDrawable(rbd1);
+
+        download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),"Download",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),"Register",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
         return rootView;
 
 
     }
 
-    public static TopCoder newInstance(int instance) {
+    public static FreshersCodeZone newInstance(int instance) {
         Bundle args = new Bundle();
         args.putInt(ARGS_INSTANCE, instance);
-        TopCoder fragment = new TopCoder();
+        FreshersCodeZone fragment = new FreshersCodeZone();
         fragment.setArguments(args);
         return fragment;
     }

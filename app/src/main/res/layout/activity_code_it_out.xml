@@ -14,19 +14,13 @@
         android:layout_height="match_parent"
         android:background="@color/chrome_grey"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_gravity="center"
+        >
 
-        <ImageView
-            android:layout_height="50dp"
-            android:layout_width="50dp"
-            android:src="@drawable/logo1"
-            android:id="@+id/subactimage2"
-            android:transitionName="kittens"
-            />
 
 
         <ListView
-            android:layout_below="@id/subactimage2"
             android:divider="@null"
             android:dividerHeight="0dp"
             android:layout_marginTop="0dp"

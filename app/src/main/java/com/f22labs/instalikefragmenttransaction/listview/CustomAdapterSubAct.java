@@ -3,30 +3,17 @@ package com.f22labs.instalikefragmenttransaction.listview;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.TransitionDrawable;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
-import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.f22labs.instalikefragmenttransaction.Data.Event_Data;
 import com.f22labs.instalikefragmenttransaction.Data.SubActData;
-import com.f22labs.instalikefragmenttransaction.FinalActivity.TopCoder;
 import com.f22labs.instalikefragmenttransaction.R;
-import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
-import com.f22labs.instalikefragmenttransaction.fragments.BaseFragment;
-import com.f22labs.instalikefragmenttransaction.fragments.CodeItOut;
-import com.f22labs.instalikefragmenttransaction.fragments.HomeFragment;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -49,7 +36,7 @@ public class CustomAdapterSubAct extends BaseAdapter {
     {
         this.c = c;
         this.subAct = subAct;
-        this.subactimage = (ImageView) view.findViewById(R.id.subactimage);
+        this.subactimage = (ImageView) view.findViewById(R.id.subactitemimage);
     }
 
     @Override
@@ -76,12 +63,14 @@ public class CustomAdapterSubAct extends BaseAdapter {
 
         if(view==null)
         {
-            view = inflater.inflate(R.layout.sub_act_model,viewGroup,false);
+            view = inflater.inflate(R.layout.subact_item_layout,viewGroup,false);
 
         }
 
-        subacttext= (TextView)view.findViewById(R.id.subacttext);
-        subactimage = (ImageView) view.findViewById(R.id.subactimage);
+        subacttext= (TextView)view.findViewById(R.id.subactitemtext);
+        subactimage = (ImageView) view.findViewById(R.id.subactitemimage);
+
+
 
 
         final String name1 = subAct.get(i).getName1();
