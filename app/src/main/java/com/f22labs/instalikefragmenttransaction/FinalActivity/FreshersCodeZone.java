@@ -40,7 +40,7 @@ public class FreshersCodeZone extends BaseFragment {
 
         ImageView img1 = (ImageView) rootView.findViewById(R.id.subactimage1);
 
-        Bitmap bitmap1 = BitmapFactory.decodeResource(rootView.getResources(),R.drawable.login1);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(rootView.getResources(),R.drawable.freshers);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(rootView.getResources(),bitmap1);
         rbd1.setCircular(true);
         img1.setImageDrawable(rbd1);

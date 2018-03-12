@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.f22labs.instalikefragmenttransaction.FinalActivity.Codex">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/subactimage1"
+        android:transitionName="kittens"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/subactimage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/finalacttitile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Biz Quiz"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The national quiz will test the aptitude, business skills, current affairs and general knowledge of the students. The quiz will be divided into two stages."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stages "
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STAGE 1 : basic aptitude and business quiz (prelims). This stage will test the basic aptitude of the students and also will contain some questions on current affairs and general knowledge. Top 5 teams will be shortlisted for the second round."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STAGE 2 : on stage round (This round will contains four rounds ). This round will be on stage round with questions relating to the famous startups, businesses, questions on Indian and International affairs and other major domains. This stage will witness buzzer round, rapid fire round, personality round."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/rules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rules and Regulations"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participants-Team of two. The team cannot use Internet to answer the questions. All the teams should complete the task within the time frame."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="EVENT COORDINATOR"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Devansh Jain"
+                android:layout_weight="5"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="+91-9649237264"
+                android:id="@+id/con1"
+                android:clickable="true"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingBottom="25dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Ashima Agarwal"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/con2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:clickable="true"
+                android:text="+91-9001788595"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_margin="7dp"
+            android:background="@drawable/circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:clickable="true"
+            />
+        <Button
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Download"
+            android:padding="10dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/circle"
+            android:textColor="@color/white"
+            android:clickable="true"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>

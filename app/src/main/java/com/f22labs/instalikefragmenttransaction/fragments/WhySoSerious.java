@@ -68,6 +68,8 @@ import com.f22labs.instalikefragmenttransaction.Data.SubActData;
 import com.f22labs.instalikefragmenttransaction.DetailsTransition;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.LanGaming;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.TreasureHunt;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
@@ -114,8 +116,6 @@ public class WhySoSerious extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
-
         ButterKnife.bind(this, rootView);
 
         Bundle args = getArguments();
@@ -126,7 +126,7 @@ public class WhySoSerious extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() );
 
         lv.setAdapter(adapter);
 
@@ -145,13 +145,13 @@ public class WhySoSerious extends BaseFragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i==0)
                 {
-                    FreshersCodeZone freshersCodeZone = FreshersCodeZone.newInstance(0);
+                    TreasureHunt treasureHunt = TreasureHunt.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        freshersCodeZone.setSharedElementEnterTransition(new DetailsTransition());
-                        freshersCodeZone.setEnterTransition(new AutoTransition());
-                        freshersCodeZone.setExitTransition(new AutoTransition());
-                        freshersCodeZone.setSharedElementReturnTransition(new DetailsTransition());
+                        treasureHunt.setSharedElementEnterTransition(new DetailsTransition());
+                        treasureHunt.setEnterTransition(new AutoTransition());
+                        treasureHunt.setExitTransition(new AutoTransition());
+                        treasureHunt.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -161,20 +161,20 @@ public class WhySoSerious extends BaseFragment {
                            // .addToBackStack("This is to")
                             .commit();
 
-                      mFragmentNavigation.pushFragment(freshersCodeZone);
+                      mFragmentNavigation.pushFragment(treasureHunt);
                     ((MainActivity)getActivity()).updateToolbarTitle("Treasure Hunt");
 
                 }
 
                 if(i==1)
                 {
-                    Codex codex = Codex.newInstance(0);
+                    LanGaming lanGaming = LanGaming.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codex.setSharedElementEnterTransition(new DetailsTransition());
-                        codex.setEnterTransition(new AutoTransition());
-                        codex.setExitTransition(new AutoTransition());
-                        codex.setSharedElementReturnTransition(new DetailsTransition());
+                        lanGaming.setSharedElementEnterTransition(new DetailsTransition());
+                        lanGaming.setEnterTransition(new AutoTransition());
+                        lanGaming.setExitTransition(new AutoTransition());
+                        lanGaming.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -184,7 +184,7 @@ public class WhySoSerious extends BaseFragment {
                           //  .addToBackStack("This is to")
                             .commit();
 
-                     mFragmentNavigation.pushFragment(codex);
+                     mFragmentNavigation.pushFragment(lanGaming);
                     ((MainActivity)getActivity()).updateToolbarTitle("LAN Gaming");
 
                 }

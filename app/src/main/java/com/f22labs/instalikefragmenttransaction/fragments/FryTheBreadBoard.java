@@ -66,9 +66,12 @@ import android.widget.ListView;
 
 import com.f22labs.instalikefragmenttransaction.Data.SubActData;
 import com.f22labs.instalikefragmenttransaction.DetailsTransition;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.CircuitAThon;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.CodeWars3;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.LedExpo;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.MindSpark;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
@@ -115,8 +118,6 @@ public class FryTheBreadBoard extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
-
         ButterKnife.bind(this, rootView);
 
         Bundle args = getArguments();
@@ -127,7 +128,7 @@ public class FryTheBreadBoard extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() );
 
         lv.setAdapter(adapter);
 
@@ -146,13 +147,13 @@ public class FryTheBreadBoard extends BaseFragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i==0)
                 {
-                    FreshersCodeZone freshersCodeZone = FreshersCodeZone.newInstance(0);
+                    CircuitAThon circuitAThon = CircuitAThon.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        freshersCodeZone.setSharedElementEnterTransition(new DetailsTransition());
-                        freshersCodeZone.setEnterTransition(new AutoTransition());
-                        freshersCodeZone.setExitTransition(new AutoTransition());
-                        freshersCodeZone.setSharedElementReturnTransition(new DetailsTransition());
+                        circuitAThon.setSharedElementEnterTransition(new DetailsTransition());
+                        circuitAThon.setEnterTransition(new AutoTransition());
+                        circuitAThon.setExitTransition(new AutoTransition());
+                        circuitAThon.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -162,20 +163,20 @@ public class FryTheBreadBoard extends BaseFragment {
                            // .addToBackStack("This is to")
                             .commit();
 
-                      mFragmentNavigation.pushFragment(freshersCodeZone);
+                      mFragmentNavigation.pushFragment(circuitAThon);
                     ((MainActivity)getActivity()).updateToolbarTitle("Circuit-A-Thon");
 
                 }
 
                 if(i==1)
                 {
-                    Codex codex = Codex.newInstance(0);
+                    MindSpark mindSpark = MindSpark.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codex.setSharedElementEnterTransition(new DetailsTransition());
-                        codex.setEnterTransition(new AutoTransition());
-                        codex.setExitTransition(new AutoTransition());
-                        codex.setSharedElementReturnTransition(new DetailsTransition());
+                        mindSpark.setSharedElementEnterTransition(new DetailsTransition());
+                        mindSpark.setEnterTransition(new AutoTransition());
+                        mindSpark.setExitTransition(new AutoTransition());
+                        mindSpark.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -185,23 +186,23 @@ public class FryTheBreadBoard extends BaseFragment {
                           //  .addToBackStack("This is to")
                             .commit();
 
-                     mFragmentNavigation.pushFragment(codex);
+                     mFragmentNavigation.pushFragment(mindSpark);
                     ((MainActivity)getActivity()).updateToolbarTitle("Mind Spark");
 
                 }
 
                 if(i==2)
                 {
-                    CodeWars3 codeWars3 = CodeWars3.newInstance(0);
+                    LedExpo ledExpo = LedExpo.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codeWars3.setSharedElementEnterTransition(new DetailsTransition());
-                        codeWars3.setEnterTransition(new AutoTransition());
-                        setExitTransition(new AutoTransition());
-                        codeWars3.setSharedElementReturnTransition(new DetailsTransition());
+                        ledExpo.setSharedElementEnterTransition(new DetailsTransition());
+                        ledExpo.setEnterTransition(new AutoTransition());
+                        ledExpo.setExitTransition(new AutoTransition());
+                        ledExpo.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
-                    mFragmentNavigation.pushFragment(codeWars3);
+                    mFragmentNavigation.pushFragment(ledExpo);
                     ((MainActivity)getActivity()).updateToolbarTitle("LED Expo");
                 }
 

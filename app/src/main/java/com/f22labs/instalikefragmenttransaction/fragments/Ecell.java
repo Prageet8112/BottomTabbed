@@ -66,9 +66,12 @@ import android.widget.ListView;
 
 import com.f22labs.instalikefragmenttransaction.Data.SubActData;
 import com.f22labs.instalikefragmenttransaction.DetailsTransition;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.Admad;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.BizQuiz;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.CodeWars3;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.PitchStart;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
@@ -115,8 +118,6 @@ public class Ecell extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
-
         ButterKnife.bind(this, rootView);
 
         Bundle args = getArguments();
@@ -127,7 +128,7 @@ public class Ecell extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity());
 
         lv.setAdapter(adapter);
 
@@ -146,13 +147,13 @@ public class Ecell extends BaseFragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i==0)
                 {
-                    FreshersCodeZone freshersCodeZone = FreshersCodeZone.newInstance(0);
+                    Admad admad = Admad.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        freshersCodeZone.setSharedElementEnterTransition(new DetailsTransition());
-                        freshersCodeZone.setEnterTransition(new AutoTransition());
-                        freshersCodeZone.setExitTransition(new AutoTransition());
-                        freshersCodeZone.setSharedElementReturnTransition(new DetailsTransition());
+                        admad.setSharedElementEnterTransition(new DetailsTransition());
+                        admad.setEnterTransition(new AutoTransition());
+                        admad.setExitTransition(new AutoTransition());
+                        admad.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -162,20 +163,20 @@ public class Ecell extends BaseFragment {
                            // .addToBackStack("This is to")
                             .commit();
 
-                      mFragmentNavigation.pushFragment(freshersCodeZone);
-                    ((MainActivity)getActivity()).updateToolbarTitle("Speaker Session");
+                      mFragmentNavigation.pushFragment(admad);
+                    ((MainActivity)getActivity()).updateToolbarTitle("Admad");
 
                 }
 
                 if(i==1)
                 {
-                    Codex codex = Codex.newInstance(0);
+                    BizQuiz bizQuiz = BizQuiz.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codex.setSharedElementEnterTransition(new DetailsTransition());
-                        codex.setEnterTransition(new AutoTransition());
-                        codex.setExitTransition(new AutoTransition());
-                        codex.setSharedElementReturnTransition(new DetailsTransition());
+                        bizQuiz.setSharedElementEnterTransition(new DetailsTransition());
+                        bizQuiz.setEnterTransition(new AutoTransition());
+                        bizQuiz.setExitTransition(new AutoTransition());
+                        bizQuiz.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -185,23 +186,23 @@ public class Ecell extends BaseFragment {
                           //  .addToBackStack("This is to")
                             .commit();
 
-                     mFragmentNavigation.pushFragment(codex);
+                     mFragmentNavigation.pushFragment(bizQuiz);
                     ((MainActivity)getActivity()).updateToolbarTitle("Biz  Quiz");
 
                 }
 
                 if(i==2)
                 {
-                    CodeWars3 codeWars3 = CodeWars3.newInstance(0);
+                    PitchStart pitchStart = PitchStart.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codeWars3.setSharedElementEnterTransition(new DetailsTransition());
-                        codeWars3.setEnterTransition(new AutoTransition());
-                        setExitTransition(new AutoTransition());
-                        codeWars3.setSharedElementReturnTransition(new DetailsTransition());
+                        pitchStart.setSharedElementEnterTransition(new DetailsTransition());
+                        pitchStart.setEnterTransition(new AutoTransition());
+                        pitchStart.setExitTransition(new AutoTransition());
+                        pitchStart.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
-                    mFragmentNavigation.pushFragment(codeWars3);
+                    mFragmentNavigation.pushFragment(pitchStart);
                     ((MainActivity)getActivity()).updateToolbarTitle("Pitch Start");
                 }
 
@@ -219,7 +220,7 @@ public class Ecell extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Speaker Session",R.drawable.login1);
+        SubActData ed = new SubActData("Admad",R.drawable.login1);
         arrayEvents.add(ed);
 
         ed = new SubActData("Biz Quiz",R.drawable.login1);

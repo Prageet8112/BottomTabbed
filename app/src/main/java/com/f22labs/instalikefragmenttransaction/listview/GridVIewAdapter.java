@@ -54,7 +54,7 @@ public class GridVIewAdapter extends ArrayAdapter {
 
         ImageItem item = (ImageItem) data.get(position);
 
-         Bitmap bitmap4 = BitmapFactory.decodeResource(context.getResources(),R.drawable.logo1);
+         Bitmap bitmap4 = BitmapFactory.decodeResource(context.getResources(),item.getImage());
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(context.getResources(),bitmap4);
         rbd1.setCircular(true);
         holder.image.setImageDrawable(rbd1);

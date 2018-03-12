@@ -20,6 +20,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.f22labs.instalikefragmenttransaction.AppReminder;
+import com.f22labs.instalikefragmenttransaction.Developers2;
 import com.f22labs.instalikefragmenttransaction.LoginActivity;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.fragments.BaseFragment;
@@ -203,6 +204,11 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
             case R.id.menureminder:
                 Log.d("dryrun","here");
                 startActivity(new Intent(this,AppReminder.class));
+                break;
+
+            case R.id.menudevelopers:
+                Log.d("dryrun","here");
+                startActivity(new Intent(this,Developers2.class));
                 break;
             case android.R.id.home:
                         onBackPressed();

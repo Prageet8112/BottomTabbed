@@ -72,7 +72,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ON STAGE FINALE : Quiz master will conduct the quiz. Top 4 Teams of round 1 will progress to Round 2. Each team will go through 4-5 Audio Visual Quizzing rounds."
+            android:text="2. ON STAGE FINALE : Quiz master will conduct the quiz. Top 4 Teams of round 1 will progress to Round 2. Each team will go through 4-5 Audio Visual Quizzing rounds."
             android:textSize="20sp"
             android:textColor="@color/white"
             />

@@ -32,11 +32,10 @@ public class CustomAdapterSubAct extends BaseAdapter {
 
     public TextView subacttext;
 
-    public CustomAdapterSubAct(Context c , ArrayList<SubActData> subAct , View view)
+    public CustomAdapterSubAct(Context c , ArrayList<SubActData> subAct )
     {
         this.c = c;
         this.subAct = subAct;
-        this.subactimage = (ImageView) view.findViewById(R.id.subactitemimage);
     }
 
     @Override
@@ -80,7 +79,7 @@ public class CustomAdapterSubAct extends BaseAdapter {
         subacttext.setText(name1);
         subactimage.setImageResource(image1);
 
-        Bitmap bitmap1 = BitmapFactory.decodeResource(view.getResources(),R.drawable.logo1);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(view.getResources(),image1);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(view.getResources(),bitmap1);
         rbd1.setCircular(true);
         subactimage.setImageDrawable(rbd1);

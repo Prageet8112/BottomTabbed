@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/dev1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/devimage1"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+        <TextView
+            android:id="@+id/devname1"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_width="150dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/devcontact1"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_width="150dp"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/dev1"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/devimage2"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+        <TextView
+            android:id="@+id/devname2"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_width="150dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/devcontact2"
+            android:layout_width="150dp"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/dev1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/devimage3"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+        <TextView
+            android:id="@+id/devname3"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:id="@+id/devcontact3"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_width="150dp"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
