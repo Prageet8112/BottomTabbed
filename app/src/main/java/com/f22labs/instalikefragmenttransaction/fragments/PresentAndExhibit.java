@@ -220,12 +220,12 @@ public class PresentAndExhibit extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Ideate",R.drawable.login1);
+        SubActData ed = new SubActData("Ideate",R.drawable.ideate);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Tech X",R.drawable.login1);
+        ed = new SubActData("Tech X",R.drawable.techx);
         arrayEvents.add(ed);
-        ed = new SubActData("Tech Zenith",R.drawable.login1);
+        ed = new SubActData("Tech Zenith",R.drawable.techzenith);
         arrayEvents.add(ed);
 
         return arrayEvents;

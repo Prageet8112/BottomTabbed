@@ -1,5 +1,6 @@
 package com.f22labs.instalikefragmenttransaction;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -38,6 +39,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 /**
@@ -47,59 +49,81 @@ import java.util.ArrayList;
 public class functions {
     String name,roll,branch,sem,mobile,email,password;
     DatabaseReference db,us;
-    com.f22labs.instalikefragmenttransaction.Users gg;
     String uid;
     static HSSFSheet sheet;
-    HSSFWorkbook workbook;
-    ArrayList<String> str,team;
-    ArrayList<com.f22labs.instalikefragmenttransaction.Users> user;
-    protected functions(){
+    static HSSFWorkbook workbook;
+    static ArrayList<String> str,team;
+    Users gg;
+    String strn[]=new String[7];
+    static ArrayList<com.f22labs.instalikefragmenttransaction.Users> user;
+
+    public void feed( String event, String team){
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+        final String e=event.replace('.',',');
+        final String t=team.replace('.',',');
         uid=user.getUid().toString();
-        us=FirebaseDatabase.getInstance().getReference("Users");
+        us=FirebaseDatabase.getInstance().getReference("Techvibes").child("Users").child(uid);
+      //  Log.d("dry",us.toString());
         us.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot userSnapshot: dataSnapshot.getChildren()){
-                    if(userSnapshot.getValue().equals(uid)){
-                        for (DataSnapshot childEventSnapshot : userSnapshot.getChildren()) {
-                            gg = childEventSnapshot.getValue(com.f22labs.instalikefragmenttransaction.Users.class);
-                            name=gg.getName();
-                            roll=gg.getRoll();
-                            branch=gg.getBranch();
-                            sem=gg.getSem();
-                            mobile=gg.getMobile();
-                            email=gg.getEmail().replace(',','.');
-                            password=gg.getPassword();
-                        }
+                   // Log.d("dry",dataSnapshot.toString());
+                String s[]=dataSnapshot.getValue().toString().split(", ");
+                for(int i=0;i<7;i++){
+                    strn[i]=s[i].substring(s[i].indexOf('=')+1);
+               //     Log.d("dry",i+" "+strn[i]);
+                }
+                strn[6].replace('}',' ').trim();
+                gg=new Users(strn[4],strn[5],strn[1],strn[6],strn[2],strn[3],strn[0]);
+             //   Log.d("dryrunt",gg.getName());
+
+                //  Log.d("dry",g.getName());
+                db= FirebaseDatabase.getInstance().getReference().child("Events").child(e);
+                db.child(t+"_"+uid).setValue(gg);
                     }
 
 
-                }}
+
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 return; }
         });
-    }
-    protected void feed(String event, String team){
-        event=event.replace('.',',');
-        team=team.replace('.',',');
-        db= FirebaseDatabase.getInstance().getReference("Events").child(event);
-        db.child(team+"_"+uid).setValue(gg);
-        us.child(uid).child("event").setValue(event+"_"+team);
+        us=FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
+        us.child(e).setValue(e);
+
 
     }
-    protected ArrayList<String> retrieveformyactivity(){
+    public ArrayList retrieveregistered(){
+      //  Log.d("dry","entered");
+     //   Log.d("dry",FirebaseDatabase.getInstance().getReference().toString());
+     //   Log.d("dry",FirebaseDatabase.getInstance().getReference().child("Users").toString());
+     //   Log.d("dry",FirebaseDatabase.getInstance().getReference().child("Users").child(uid).toString());
+        Log.d("dryrun","afetr all that");
+        ArrayList<String> chutiyap=new ArrayList<>();
+        for(String s:str){
+            Log.d("dryrun",s);
+            chutiyap.add(s);
+            if(s.equals(""))
+                Log.d("dry","nulla");
+        }
 
-        us=us.child(uid).child("event");
+        Log.d("dryrun","afetr or before??");
+        us=FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
         str=new ArrayList<>() ;
+        Log.d("dry",us.toString());
         us.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.d("dry",dataSnapshot.toString());
                 for(DataSnapshot ds: dataSnapshot.getChildren()){
-                    str.add(ds.getValue().toString());
+                    Log.d("dry",ds.toString());
+                    functions.str.add(ds.getValue().toString());
+                    Log.d("dry etry",ds.getValue().toString());
+
                 }
+
             }
 
             @Override
@@ -107,19 +131,38 @@ public class functions {
 
             }
         });
-        return str;
+
+        return chutiyap;
     }
-    protected ArrayList<com.f22labs.instalikefragmenttransaction.Users> retrieve(String event){
-        event=event.replace('.',',');
-        user=new ArrayList<>();
-        team=new ArrayList<>();
+    public void retrieve( String event, final Context c){
+
+        final String vent=event.replace('.',',');
+        functions.user=new ArrayList<>();
+        Log.d("downn",user.size()+"");
+team=new ArrayList<>();
+
         db=FirebaseDatabase.getInstance().getReference("Events").child(event);
+
         db.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.d("qwe",dataSnapshot.toString());
+                ArrayList<Users> user=new ArrayList<>();
                 for(DataSnapshot id : dataSnapshot.getChildren()){
-                    user.add(id.getValue(com.f22labs.instalikefragmenttransaction.Users.class));
-                }
+                    if(id.getKey()!=null){
+                    Log.d("qwe",id.getKey().split("_")[0]);
+                    team.add(id.getKey().toString());
+                    String s[]=id.getValue().toString().split(", ");
+                    for(int i=0;i<7;i++){
+                        strn[i]=s[i].substring(s[i].indexOf('=')+1);
+                             Log.d("down",i+" "+strn[i]);
+                    }
+                    strn[6].replace('}',' ').trim();
+                    Users a=new Users(strn[4],strn[5],strn[1],strn[6],strn[2],strn[3],strn[0]);
+                    user.add(a);
+                }}
+                functions.download(vent,team,user,c);
+                Log.d("downbn",user.size()+"");
             }
 
             @Override
@@ -127,9 +170,12 @@ public class functions {
 
             }
         });
-        return user;
+
+        Log.d("downan",user.size()+"");
+
     }
-protected void download(String event){
+public static void download(String event,ArrayList<String>t, ArrayList<Users> list, Context c){
+    Log.d("download run","Just entered");
     workbook = new HSSFWorkbook();
     sheet = workbook.createSheet("FirstSheet");
     HSSFRow rowhead = sheet.createRow((short) 0);
@@ -140,34 +186,38 @@ protected void download(String event){
     rowhead.createCell((short) 4).setCellValue("Branch");
     rowhead.createCell((short) 5).setCellValue("Email");
     rowhead.createCell((short) 6).setCellValue("Contact");
-    functions f=new functions();
-    f.retrieve(event);
+    rowhead.createCell((short) 6).setCellValue("Teamname");
+    Log.d("download run","sheet created");
+
+    Log.d("download run","function calling");
     int i = 1;
-    for (com.f22labs.instalikefragmenttransaction.Users s : user) {
+    for(Users u:list){
+        Log.d("download run", u.getName());
+        String s[]=t.get(i-1).split("_");
         HSSFRow row = sheet.createRow((short) i);
         row.createCell((short) 0).setCellValue(i++);
-        row.createCell((short) 1).setCellValue(s.name);
-        row.createCell((short) 2).setCellValue(s.roll);
-        row.createCell((short) 3).setCellValue(s.sem);
-        row.createCell((short) 4).setCellValue(s.branch);
-        row.createCell((short) 5).setCellValue(s.email.replace(',', '.'));
-        row.createCell((short) 6).setCellValue(s.mobile);
+        row.createCell((short) 1).setCellValue(u.name);
+        row.createCell((short) 2).setCellValue(u.roll);
+        row.createCell((short) 3).setCellValue(u.sem.replace('}',' '));
+        row.createCell((short) 4).setCellValue(u.branch);
+        row.createCell((short) 5).setCellValue(u.email.replace(',', '.'));
+        row.createCell((short) 6).setCellValue(u.mobile);
+        row.createCell((short) 7).setCellValue(s[0]);
 
     }
 
-    File file = new File(Environment.getExternalStorageDirectory(), event+".xls");  //EventActivity replace with
+    File file = new File(c.getExternalFilesDir(null), event+".xls");
     FileOutputStream os = null;
 
     try {
         os = new FileOutputStream(file);
         workbook.write(os);
-        //         Log.w("FileUtils", "Writing file" + file);
- //       Toast.makeText(getApplicationContext(),"File stored in Android/data/com.examplea.prageet.myapplication/files folder.", Toast.LENGTH_LONG).show();
+        Log.w("FileUtils", "Writing file" + file);
 
     } catch (IOException e) {
-        //          Log.w("FileUtils", "Error writing " + file, e);
+        Log.w("FileUtils", "Error writing " + file, e);
     } catch (Exception e) {
-        //          Log.w("FileUtils", "Failed to save file", e);
+        Log.w("FileUtils", "Failed to save file", e);
     } finally {
         try {
             if (null != os)
@@ -175,7 +225,6 @@ protected void download(String event){
         } catch (Exception ex) {
         }
     }
-
 }
 
 }

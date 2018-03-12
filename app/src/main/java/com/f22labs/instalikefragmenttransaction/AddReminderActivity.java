@@ -208,8 +208,6 @@ public class AddReminderActivity extends AppCompatActivity implements
         }
 
         getSupportActionBar().setTitle(R.string.title_activity_add_reminder);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
 
 
     }
@@ -595,8 +593,7 @@ public class AddReminderActivity extends AppCompatActivity implements
                 new AlarmScheduler().setAlarm(getApplicationContext(), selectedTimestamp, mCurrentReminderUri);
             }
 
-            Toast.makeText(this, "Alarm time is " + selectedTimestamp,
-                    Toast.LENGTH_LONG).show();
+          //  Toast.makeText(this, "Alarm time is " + selectedTimestamp,Toast.LENGTH_LONG).show();
         }
 
         // Create toast to confirm new reminder

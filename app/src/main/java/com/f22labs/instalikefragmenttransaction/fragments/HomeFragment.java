@@ -155,7 +155,7 @@ public class HomeFragment extends BaseFragment {
             }
         });*/
 
-         ((MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" :"Sub Home" + (fragCount + 1));
+         ((MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "TechVibes'18" :"Sub Home" + (fragCount + 1));
     }
 
     @Override

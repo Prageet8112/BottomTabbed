@@ -11,7 +11,9 @@
         android:theme="@style/AppTheme">
         <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
         <uses-permission android:name="android.permission.INTERNET" />
-
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
         <activity android:name=".activities.MainActivity" android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -28,6 +30,7 @@
 
         <activity android:name=".LoginActivity">
 
+
         </activity>
         <activity android:name=".SplashScreen"
             android:configChanges="orientation"
@@ -38,7 +41,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntroActivity"></activity>
+        <activity android:name=".IntroActivity">
+
+        </activity>
 
         <activity android:name=".AppReminder" />
         <activity android:name=".AddReminderActivity"></activity>

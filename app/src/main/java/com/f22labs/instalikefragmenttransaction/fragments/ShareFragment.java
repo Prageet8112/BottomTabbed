@@ -50,18 +50,7 @@ public class ShareFragment extends BaseFragment{
     {
         ArrayList<Contact_Data> arrayContacts = new ArrayList<>();
 
-        Contact_Data cd = new Contact_Data("Head Cordinator","Deepank Sharma","7792089122",R.drawable.deepank,R.drawable.call);
-        arrayContacts.add(cd);
-
-        cd = new Contact_Data("Head Cordinator","Tripti Katara","7793045228",R.drawable.tripti,R.drawable.call);
-        arrayContacts.add(cd);
-        cd = new Contact_Data("Head Cordinator","Manvendra Kumar","7073341396",R.drawable.manvendra,R.drawable.call);
-        arrayContacts.add(cd);
-        cd = new Contact_Data("Head Cordinator", "Navin Sharma","7023072392",R.drawable.naveen,R.drawable.call);
-        arrayContacts.add(cd);
-        cd = new Contact_Data("Head Cordinator","Ashima Agarwal","9001788595",R.drawable.ashima,R.drawable.call);
-        arrayContacts.add(cd);
-        cd = new Contact_Data("Senior Cordinator","Gunjan Surolia","7976298841",R.drawable.gunjan,R.drawable.call);
+        Contact_Data cd = new Contact_Data("Senior Cordinator","Gunjan Surolia","7976298841",R.drawable.gunjan,R.drawable.call);
         arrayContacts.add(cd);
         cd = new Contact_Data("Senior Cordinator","Shubham Mathur","82095540378",R.drawable.shubham,R.drawable.call);
         arrayContacts.add(cd);

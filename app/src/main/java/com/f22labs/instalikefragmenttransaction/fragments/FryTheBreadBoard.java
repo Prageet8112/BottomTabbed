@@ -220,12 +220,12 @@ public class FryTheBreadBoard extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Circuit-A-Thon",R.drawable.login1);
+        SubActData ed = new SubActData("Circuit-A-Thon",R.drawable.circuitathon);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Mind Spark",R.drawable.login1);
+        ed = new SubActData("Mind Spark",R.drawable.mindspark);
         arrayEvents.add(ed);
-        ed = new SubActData("LED Expo",R.drawable.login1);
+        ed = new SubActData("LED Expo",R.drawable.ledexpo);
         arrayEvents.add(ed);
 
         return arrayEvents;

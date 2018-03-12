@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#002633</color>
-    <color name="colorPrimaryDark">@color/grey_trans</color>
+
+    <color name="colorPrimaryDark">@color/black</color>
     <color name="colorAccent">#FF4081</color>
     <color name="fab_pressed">#546e7a</color>
 
@@ -55,6 +56,7 @@
 
     <!-- dots inactive colors -->
     <color name="dot_inactive">#cccccc</color>
+
 
 
 </resources>

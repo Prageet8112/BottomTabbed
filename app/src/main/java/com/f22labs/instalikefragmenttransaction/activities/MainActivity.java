@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.f22labs.instalikefragmenttransaction.AppReminder;
 import com.f22labs.instalikefragmenttransaction.Developers2;
@@ -66,7 +67,7 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 
     private FragNavController mNavController;
 
-    private FragmentHistory fragmentHistory;
+    public static FragmentHistory fragmentHistory;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -225,12 +226,16 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
     @Override
     public void onBackPressed() {
 
-        if (!mNavController.isRootFragment()) {
+        if (!mNavController.isRootFragment())
+        {
             mNavController.popFragment();
-        } else {
+        }
+        else {
 
             if (fragmentHistory.isEmpty()) {
+                finish();
                 super.onBackPressed();
+
             } else {
 
 
@@ -249,6 +254,7 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
                     updateTabSelection(0);
 
                     fragmentHistory.emptyStack();
+
                 }
             }
 
@@ -350,7 +356,6 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 
         return true;
     }
-
 
 
 }

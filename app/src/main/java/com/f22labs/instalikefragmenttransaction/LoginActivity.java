@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Log.d("dryrun", "onstart before checking");
         if(mAuth.getCurrentUser()!= null){
             Log.d("onstart", "onstart checking");
-            Toast.makeText(getApplicationContext(),"Logged in",Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getApplicationContext(),"Logged in",Toast.LENGTH_SHORT).show();
             Intent intent= new Intent(LoginActivity.this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

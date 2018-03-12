@@ -220,12 +220,12 @@ public class Ecell extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Admad",R.drawable.login1);
+        SubActData ed = new SubActData("Admad",R.drawable.admad);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Biz Quiz",R.drawable.login1);
+        ed = new SubActData("Biz Quiz",R.drawable.bizquiz);
         arrayEvents.add(ed);
-        ed = new SubActData("Pitch Start",R.drawable.login1);
+        ed = new SubActData("Pitch Start",R.drawable.pitchstart);
         arrayEvents.add(ed);
 
         return arrayEvents;

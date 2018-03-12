@@ -203,10 +203,10 @@ public class Quiz extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("IPL Auction",R.drawable.login1);
+        SubActData ed = new SubActData("IPL Auction",R.drawable.iplauctions);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Techno Management Quiz",R.drawable.login1);
+        ed = new SubActData("Techno Management Quiz",R.drawable.tmquiz);
         arrayEvents.add(ed);
 
         return arrayEvents;

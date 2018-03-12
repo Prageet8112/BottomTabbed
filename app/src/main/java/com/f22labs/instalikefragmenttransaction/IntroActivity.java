@@ -17,8 +17,12 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
+import com.f22labs.instalikefragmenttransaction.utils.FragmentHistory;
+
+import static com.f22labs.instalikefragmenttransaction.activities.MainActivity.fragmentHistory;
 
 public class IntroActivity extends Activity {
 
@@ -42,14 +46,14 @@ public class IntroActivity extends Activity {
 
         prefManager = getSharedPreferences("testapp",MODE_PRIVATE);
 
-        if(prefManager.getBoolean("intro",false))
+        if(prefManager.getBoolean("intro1",false))
         {
+            Toast.makeText(this.getApplicationContext(),"Press BACK Button again to Exit",Toast.LENGTH_SHORT).show();
+            finish();
             launchHomeScreen();
         }
         else {
             setContentView(R.layout.activity_intro_slider);
-
-
 
             viewPager = (ViewPager) findViewById(R.id.view_pager);
             dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
@@ -79,6 +83,8 @@ public class IntroActivity extends Activity {
 
     public  void btnSkipClick(View v)
     {
+
+        finish();
         launchHomeScreen();
     }
 
@@ -91,6 +97,8 @@ public class IntroActivity extends Activity {
             // move to next screen
             viewPager.setCurrentItem(current);
         } else {
+
+            finish();
             launchHomeScreen();
         }
     }
@@ -150,7 +158,7 @@ public class IntroActivity extends Activity {
     private void launchHomeScreen() {
         SharedPreferences sharedPreferences = getSharedPreferences("testapp",MODE_PRIVATE);
         SharedPreferences.Editor editor1 = sharedPreferences.edit();
-        editor1.putBoolean("intro",true).apply();
+        editor1.putBoolean("intro1",true).apply();
         startActivity(new Intent(this, LoginActivity.class));
 
     }

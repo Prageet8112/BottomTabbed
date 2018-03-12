@@ -222,12 +222,12 @@ public class Animated extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Vibhor Gandhi Memorial",R.drawable.login1);
+        SubActData ed = new SubActData("Vibhor Gandhi Memorial",R.drawable.vibhor);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Photo Editing",R.drawable.login1);
+        ed = new SubActData("Photo Editing",R.drawable.photoediting);
         arrayEvents.add(ed);
-        ed = new SubActData("Movie Mania",R.drawable.login1);
+        ed = new SubActData("Movie Mania",R.drawable.moviemania);
         arrayEvents.add(ed);
 
         return arrayEvents;

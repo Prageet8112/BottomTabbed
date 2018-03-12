@@ -203,10 +203,10 @@ public class FunWithBots extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Robo Soccer",R.drawable.login1);
+        SubActData ed = new SubActData("Robo Soccer",R.drawable.robosoccer);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Full Throttle",R.drawable.login1);
+        ed = new SubActData("Full Throttle",R.drawable.fullthrottle);
         arrayEvents.add(ed);
 
 

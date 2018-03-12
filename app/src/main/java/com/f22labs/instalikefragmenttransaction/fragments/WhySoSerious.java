@@ -203,10 +203,10 @@ public class WhySoSerious extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Treasure Hunt",R.drawable.login1);
+        SubActData ed = new SubActData("Treasure Hunt",R.drawable.treasurehunts);
         arrayEvents.add(ed);
 
-        ed = new SubActData("LAN Gaming",R.drawable.login1);
+        ed = new SubActData("LAN Gaming",R.drawable.langaming);
         arrayEvents.add(ed);
 
         return arrayEvents;

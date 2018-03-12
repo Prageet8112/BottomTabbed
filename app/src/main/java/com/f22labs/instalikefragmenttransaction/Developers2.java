@@ -6,6 +6,7 @@ import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class Developers2 extends AppCompatActivity {
     int fragCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.developers);
 
@@ -30,10 +32,13 @@ public class Developers2 extends AppCompatActivity {
         getDevName2 = (TextView) findViewById(R.id.devname2);
         getDevName3 = (TextView) findViewById(R.id.devname3);
 
+        getSupportActionBar().setTitle("Developers");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         getDevName1.setText("Prageet N. Gupta");
         getDevCon1.setText("+91-8741940380");
 
-        Bitmap bitmap1 = BitmapFactory.decodeResource(this.getResources(),R.drawable.tab_profile);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(this.getResources(),R.drawable.prageet);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(this.getResources(),bitmap1);
         rbd1.setCircular(true);
         devImg1.setImageDrawable(rbd1);
@@ -41,7 +46,7 @@ public class Developers2 extends AppCompatActivity {
         getDevName2.setText("Apoorv Gaurav Agarwal");
         getDevCon2.setText("+91-9610161917");
 
-        Bitmap bitmap2 = BitmapFactory.decodeResource(this.getResources(),R.drawable.tab_profile);
+        Bitmap bitmap2 = BitmapFactory.decodeResource(this.getResources(),R.drawable.apoorv);
         RoundedBitmapDrawable rbd2 = RoundedBitmapDrawableFactory.create(this.getResources(),bitmap2);
         rbd2.setCircular(true);
         devImg2.setImageDrawable(rbd2);
@@ -49,11 +54,23 @@ public class Developers2 extends AppCompatActivity {
         getDevName3.setText("Deepesh Gupta");
         getDevCon3.setText("+91-9166765231");
 
-        Bitmap bitmap3 = BitmapFactory.decodeResource(this.getResources(),R.drawable.tab_profile);
+        Bitmap bitmap3 = BitmapFactory.decodeResource(this.getResources(),R.drawable.deepesh);
         RoundedBitmapDrawable rbd3 = RoundedBitmapDrawableFactory.create(this.getResources(),bitmap3);
         rbd3.setCircular(true);
         devImg3.setImageDrawable(rbd3);
 
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
 
 }
