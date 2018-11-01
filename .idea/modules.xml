@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BottomTabbed.iml" filepath="$PROJECT_DIR$/BottomTabbed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BottomTabbed23.iml" filepath="$PROJECT_DIR$/BottomTabbed23.iml" />
       <module fileurl="file://$PROJECT_DIR$/InstaLikeFragmentTransaction.iml" filepath="$PROJECT_DIR$/InstaLikeFragmentTransaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
