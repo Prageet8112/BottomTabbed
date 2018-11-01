@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back3"
+    tools:context="com.f22labs.instalikefragmenttransaction.FinalActivity.Codex">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/subactimage1"
+        android:transitionName="kittens"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/subactimage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/finalacttitile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admad"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admad is the group event in which each group has to prepare a social advertising campaign on a given topic. Group will be provided like chart paper and colours. Team leader has to present the campaign with proper explanation. There will be only one event of this topic."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/rules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rules and Regulations"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Each group has to pick a chit and according to the topic given in a chit advertising campaign is to be prepared."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Each team will get 10 min time to prepare campaign."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Team leader has to present advertisement."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Group of 4 members should be made."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="EVENT COORDINATOR"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ashima Agarwal"
+                android:layout_weight="5"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="+91-9001788595"
+                android:id="@+id/con1"
+                android:clickable="true"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingBottom="25dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Akshay Jain"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/con2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:clickable="true"
+                android:text="+91-9982222461"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_margin="7dp"
+            android:background="@drawable/circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:clickable="true"
+            />
+        <Button
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Download"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:layout_margin="7dp"
+            android:background="@drawable/circle"
+            android:textColor="@color/white"
+            android:clickable="true"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>

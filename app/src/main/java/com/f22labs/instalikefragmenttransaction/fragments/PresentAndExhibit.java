@@ -69,6 +69,9 @@ import com.f22labs.instalikefragmenttransaction.DetailsTransition;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.CodeWars3;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.Ideate;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.TechX;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.TechZenith;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
@@ -115,8 +118,6 @@ public class PresentAndExhibit extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
-
         ButterKnife.bind(this, rootView);
 
         Bundle args = getArguments();
@@ -127,7 +128,7 @@ public class PresentAndExhibit extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity()  );
 
         lv.setAdapter(adapter);
 
@@ -146,13 +147,13 @@ public class PresentAndExhibit extends BaseFragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i==0)
                 {
-                    FreshersCodeZone freshersCodeZone = FreshersCodeZone.newInstance(0);
+                    Ideate ideate = Ideate.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        freshersCodeZone.setSharedElementEnterTransition(new DetailsTransition());
-                        freshersCodeZone.setEnterTransition(new AutoTransition());
-                        freshersCodeZone.setExitTransition(new AutoTransition());
-                        freshersCodeZone.setSharedElementReturnTransition(new DetailsTransition());
+                        ideate.setSharedElementEnterTransition(new DetailsTransition());
+                        ideate.setEnterTransition(new AutoTransition());
+                        ideate.setExitTransition(new AutoTransition());
+                        ideate.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -162,20 +163,20 @@ public class PresentAndExhibit extends BaseFragment {
                            // .addToBackStack("This is to")
                             .commit();
 
-                      mFragmentNavigation.pushFragment(freshersCodeZone);
+                      mFragmentNavigation.pushFragment(ideate);
                     ((MainActivity)getActivity()).updateToolbarTitle("Ideate");
 
                 }
 
                 if(i==1)
                 {
-                    Codex codex = Codex.newInstance(0);
+                    TechX techX = TechX.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codex.setSharedElementEnterTransition(new DetailsTransition());
-                        codex.setEnterTransition(new AutoTransition());
-                        codex.setExitTransition(new AutoTransition());
-                        codex.setSharedElementReturnTransition(new DetailsTransition());
+                        techX.setSharedElementEnterTransition(new DetailsTransition());
+                        techX.setEnterTransition(new AutoTransition());
+                        techX.setExitTransition(new AutoTransition());
+                        techX.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -185,23 +186,23 @@ public class PresentAndExhibit extends BaseFragment {
                           //  .addToBackStack("This is to")
                             .commit();
 
-                     mFragmentNavigation.pushFragment(codex);
+                     mFragmentNavigation.pushFragment(techX);
                     ((MainActivity)getActivity()).updateToolbarTitle("Tech X");
 
                 }
 
                 if(i==2)
                 {
-                    CodeWars3 codeWars3 = CodeWars3.newInstance(0);
+                    TechZenith techZenith = TechZenith.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codeWars3.setSharedElementEnterTransition(new DetailsTransition());
-                        codeWars3.setEnterTransition(new AutoTransition());
-                        setExitTransition(new AutoTransition());
-                        codeWars3.setSharedElementReturnTransition(new DetailsTransition());
+                        techZenith.setSharedElementEnterTransition(new DetailsTransition());
+                        techZenith.setEnterTransition(new AutoTransition());
+                        techZenith.setExitTransition(new AutoTransition());
+                        techZenith.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
-                    mFragmentNavigation.pushFragment(codeWars3);
+                    mFragmentNavigation.pushFragment(techZenith);
                     ((MainActivity)getActivity()).updateToolbarTitle("Tech Zenith");
                 }
 
@@ -219,12 +220,12 @@ public class PresentAndExhibit extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Ideate",R.drawable.login1);
+        SubActData ed = new SubActData("Ideate",R.drawable.ideate);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Tech X",R.drawable.login1);
+        ed = new SubActData("Tech X",R.drawable.techx);
         arrayEvents.add(ed);
-        ed = new SubActData("Tech Zenith",R.drawable.login1);
+        ed = new SubActData("Tech Zenith",R.drawable.techzenith);
         arrayEvents.add(ed);
 
         return arrayEvents;

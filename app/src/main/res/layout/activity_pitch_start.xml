@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back3"
+    tools:context="com.f22labs.instalikefragmenttransaction.FinalActivity.Codex">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/subactimage1"
+        android:transitionName="kittens"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/subactimage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/finalacttitile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pitch Start"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stuck with an idea in your head ? Want a platform to showcase it and test it ?"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PITCHSTART , an entrepreneurial event is here to celebrate and promote the spirit of entrepreneurship. It provides you a chance to present your idea in front of a varied audience to give it a rigorous test from all sides possible so it can be resdy for the real world .  Also, interact with our panel of established entrepreneurs to get insights about the entrepreneurial world, common hurdles and ways to tackle them."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/rules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rules and Regulations"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:typeface="serif"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Each team will comprise of 3 or 4 members."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Only idea based startup will be enrolled for the event not the existing startups."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Each team will get a time period of 4 minutes to pitch their idea."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Any requirements from our side should be mentioned at least 2 days before the event."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Teams can use any mode to pitch their idea."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. Teams using presentations would be required to mail the same at least a day before the competition at events@techvibes.in with subject ‘PITCHSTART ppt’ along with contact details of all or one of the team members."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. Cross questioning is permitted by the judging panel."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="EVENT COORDINATOR"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Devansh Jain"
+                android:layout_weight="5"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="+91-9649237264"
+                android:id="@+id/con1"
+                android:clickable="true"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingBottom="25dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Akshay Jain"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/con2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:clickable="true"
+                android:text="+91-9982222461"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_margin="7dp"
+            android:background="@drawable/circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:clickable="true"
+            />
+        <Button
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Download"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:layout_margin="7dp"
+            android:background="@drawable/circle"
+            android:textColor="@color/white"
+            android:clickable="true"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>

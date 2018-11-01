@@ -85,7 +85,7 @@ public class CustomAdapterEvents extends BaseAdapter  {
         nametxt2.setText(name2);
         img2.setImageResource(image2);
 
-        Bitmap bitmap1 = BitmapFactory.decodeResource(view.getResources(),R.drawable.logo1);
+        Bitmap bitmap1 = BitmapFactory.decodeResource(view.getResources(),image1);
         RoundedBitmapDrawable rbd1 = RoundedBitmapDrawableFactory.create(view.getResources(),bitmap1);
         rbd1.setCircular(true);
         img1.setImageDrawable(rbd1);

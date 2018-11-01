@@ -50,16 +50,19 @@ public class ShareFragment extends BaseFragment{
     {
         ArrayList<Contact_Data> arrayContacts = new ArrayList<>();
 
-        Contact_Data cd = new Contact_Data("Head Cordinator","Prageet N. Gupta","8741940380",R.drawable.logo1,R.drawable.call);
+        Contact_Data cd = new Contact_Data("Senior Cordinator","Gunjan Surolia","7976298841",R.drawable.gunjan,R.drawable.call);
         arrayContacts.add(cd);
-
-        cd = new Contact_Data("Head Cordinator","Prageet N. Gupta","Head Coordinator",R.drawable.ic_roll_1,R.drawable.call);
+        cd = new Contact_Data("Senior Cordinator","Shubham Mathur","82095540378",R.drawable.shubham,R.drawable.call);
         arrayContacts.add(cd);
-        cd = new Contact_Data("Head Cordinator","Prageet N. Gupta","Head Coordinator",R.drawable.tab_profile,R.drawable.call);
+        cd = new Contact_Data("Senior Cordinator","Ayush Goyal","9414603536",R.drawable.ayush,R.drawable.call);
         arrayContacts.add(cd);
-        cd = new Contact_Data("Head Cordinator", "Prageet N. Gupta","Head Coordinator",R.drawable.tab_profile,R.drawable.call);
+        cd = new Contact_Data("Senior Cordinator","Ritvi Sharma","8118863581",R.drawable.ritvi,R.drawable.call);
         arrayContacts.add(cd);
-        cd = new Contact_Data("Head Cordinator","Prageet N. Gupta","Head Coordinator",R.drawable.tab_profile,R.drawable.call);
+        cd = new Contact_Data("Senior Cordinator","Richa Jain","8947924751",R.drawable.richa,R.drawable.call);
+        arrayContacts.add(cd);
+        cd = new Contact_Data("Senior Cordinator","pooja Modi","9782538163",R.drawable.pooja,R.drawable.call);
+        arrayContacts.add(cd);
+        cd = new Contact_Data("Senior Cordinator","Rajat Jain","9414000236",R.drawable.rajat,R.drawable.call);
         arrayContacts.add(cd);
 
         return arrayContacts;

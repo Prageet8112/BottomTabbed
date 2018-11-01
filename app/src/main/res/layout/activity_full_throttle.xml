@@ -13,7 +13,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/back3"
     tools:context="com.f22labs.instalikefragmenttransaction.FinalActivity.Codex">
 
     <ImageView
@@ -49,14 +49,7 @@
             android:textSize="20sp"
             android:textColor="@color/white"
             />
-        <TextView
-            android:padding="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Design a robot either wired or wireless within the specified dimensions that can operated manually and can travel through all turns of the track. The robot that will complete the specified task in least time will be the winner"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
+
         <TextView
             android:padding="15dp"
             android:layout_width="wrap_content"
@@ -106,6 +99,15 @@
             android:textSize="20sp"
             android:textColor="@color/white"
             />
+        <TextView
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Dragging or carrying of bot from wire is not allowed."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
 
         <TextView
             android:paddingLeft="15dp"
@@ -113,19 +115,11 @@
             android:paddingBottom="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4. Team with the least time taken wins."
+            android:text="5. Team with the least time taken wins."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
-        <TextView
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5. Dragging or carrying of bot from wire is not allowed."
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
+
 
         <TextView
             android:id="@+id/textView"
@@ -187,6 +181,7 @@
             android:text="Download"
             android:padding="10dp"
             android:layout_margin="7dp"
+            android:visibility="invisible"
             android:background="@drawable/circle"
             android:textColor="@color/white"
             android:clickable="true"

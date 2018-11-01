@@ -13,7 +13,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/back3"
     tools:context="com.f22labs.instalikefragmenttransaction.FinalActivity.Codex">
 
     <ImageView
@@ -72,7 +72,7 @@
             android:paddingRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ON STAGE FINALE : Quiz master will conduct the quiz. Top 4 Teams of round 1 will progress to Round 2. Each team will go through 4-5 Audio Visual Quizzing rounds."
+            android:text="2. ON STAGE FINALE : Quiz master will conduct the quiz. Top 4 Teams of round 1 will progress to Round 2. Each team will go through 4-5 Audio Visual Quizzing rounds."
             android:textSize="20sp"
             android:textColor="@color/white"
             />
@@ -190,6 +190,7 @@
             android:textSize="20sp"
             android:text="Download"
             android:padding="10dp"
+            android:visibility="invisible"
             android:layout_margin="7dp"
             android:background="@drawable/circle"
             android:textColor="@color/white"

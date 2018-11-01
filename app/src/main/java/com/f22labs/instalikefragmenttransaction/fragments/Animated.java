@@ -52,10 +52,12 @@ public class CodeItOut extends BaseFragment {
 }*/
 package com.f22labs.instalikefragmenttransaction.fragments;
 
+import android.graphics.Movie;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.RecyclerView;
 import android.transition.AutoTransition;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,6 +71,9 @@ import com.f22labs.instalikefragmenttransaction.DetailsTransition;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.CodeWars3;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.MovieMania;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.PhotoEditing;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.VibhorGandhi;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
@@ -115,8 +120,6 @@ public class Animated extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
-
         ButterKnife.bind(this, rootView);
 
         Bundle args = getArguments();
@@ -127,7 +130,7 @@ public class Animated extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() );
 
         lv.setAdapter(adapter);
 
@@ -146,13 +149,13 @@ public class Animated extends BaseFragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i==0)
                 {
-                    FreshersCodeZone freshersCodeZone = FreshersCodeZone.newInstance(0);
+                    VibhorGandhi vibhorGandhi = VibhorGandhi.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        freshersCodeZone.setSharedElementEnterTransition(new DetailsTransition());
-                        freshersCodeZone.setEnterTransition(new AutoTransition());
-                        freshersCodeZone.setExitTransition(new AutoTransition());
-                        freshersCodeZone.setSharedElementReturnTransition(new DetailsTransition());
+                        vibhorGandhi.setSharedElementEnterTransition(new DetailsTransition());
+                        vibhorGandhi.setEnterTransition(new AutoTransition());
+                        vibhorGandhi.setExitTransition(new AutoTransition());
+                        vibhorGandhi.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -162,20 +165,20 @@ public class Animated extends BaseFragment {
                            // .addToBackStack("This is to")
                             .commit();
 
-                      mFragmentNavigation.pushFragment(freshersCodeZone);
+                      mFragmentNavigation.pushFragment(vibhorGandhi);
                     ((MainActivity)getActivity()).updateToolbarTitle("Vibhor Gandhi Memorial");
 
                 }
 
                 if(i==1)
                 {
-                    Codex codex = Codex.newInstance(0);
+                    PhotoEditing photoEditing = PhotoEditing.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codex.setSharedElementEnterTransition(new DetailsTransition());
-                        codex.setEnterTransition(new AutoTransition());
-                        codex.setExitTransition(new AutoTransition());
-                        codex.setSharedElementReturnTransition(new DetailsTransition());
+                        photoEditing.setSharedElementEnterTransition(new DetailsTransition());
+                        photoEditing.setEnterTransition(new AutoTransition());
+                        photoEditing.setExitTransition(new AutoTransition());
+                        photoEditing.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -185,23 +188,23 @@ public class Animated extends BaseFragment {
                           //  .addToBackStack("This is to")
                             .commit();
 
-                     mFragmentNavigation.pushFragment(codex);
+                     mFragmentNavigation.pushFragment(photoEditing);
                     ((MainActivity)getActivity()).updateToolbarTitle("Photo Editing");
 
                 }
 
                 if(i==2)
                 {
-                    CodeWars3 codeWars3 = CodeWars3.newInstance(0);
+                    MovieMania movieMania = MovieMania.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codeWars3.setSharedElementEnterTransition(new DetailsTransition());
-                        codeWars3.setEnterTransition(new AutoTransition());
-                        setExitTransition(new AutoTransition());
-                        codeWars3.setSharedElementReturnTransition(new DetailsTransition());
+                        movieMania.setSharedElementEnterTransition(new DetailsTransition());
+                        movieMania.setEnterTransition(new AutoTransition());
+                        movieMania.setExitTransition(new AutoTransition());
+                        movieMania.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
-                    mFragmentNavigation.pushFragment(codeWars3);
+                    mFragmentNavigation.pushFragment(movieMania);
                     ((MainActivity)getActivity()).updateToolbarTitle("Movie Mania");
                 }
 
@@ -219,12 +222,12 @@ public class Animated extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Vibhor Gandhi Memorial",R.drawable.login1);
+        SubActData ed = new SubActData("Vibhor Gandhi Memorial",R.drawable.vibhor);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Photo Editing",R.drawable.login1);
+        ed = new SubActData("Photo Editing",R.drawable.photoediting);
         arrayEvents.add(ed);
-        ed = new SubActData("Movie Mania",R.drawable.login1);
+        ed = new SubActData("Movie Mania",R.drawable.moviemania);
         arrayEvents.add(ed);
 
         return arrayEvents;

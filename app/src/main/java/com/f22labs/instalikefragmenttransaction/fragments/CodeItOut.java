@@ -115,7 +115,6 @@ public class CodeItOut extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.subact_item_layout, container, false);
 
         ButterKnife.bind(this, rootView);
 
@@ -127,7 +126,7 @@ public class CodeItOut extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() );
 
         lv.setAdapter(adapter);
 
@@ -144,7 +143,7 @@ public class CodeItOut extends BaseFragment {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i==0)
+                if(i==0 && mFragmentNavigation!=null)
                 {
                     FreshersCodeZone freshersCodeZone = FreshersCodeZone.newInstance(0);
 
@@ -155,19 +154,19 @@ public class CodeItOut extends BaseFragment {
                         freshersCodeZone.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
-                    getActivity().getSupportFragmentManager()
+                   /* getActivity().getSupportFragmentManager()
                             .beginTransaction()
                             //.addSharedElement(adapter.subactimage , "kittens")
                             //.replace(R.id.relative1,freshersCodeZone)
                             //.addToBackStack("This is to")
-                            .commit();
+                            .commit();*/
 
                      mFragmentNavigation.pushFragment(freshersCodeZone);
                     ((MainActivity)getActivity()).updateToolbarTitle("Fresher's Code Zone");
 
                 }
 
-                if(i==1)
+                if(i==1 && mFragmentNavigation!=null)
                 {
                     Codex codex = Codex.newInstance(0);
 
@@ -178,26 +177,26 @@ public class CodeItOut extends BaseFragment {
                         codex.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
-                    getActivity().getSupportFragmentManager()
+                    /*getActivity().getSupportFragmentManager()
                             .beginTransaction()
                            // .addSharedElement((ImageView)adapter.subactimage , "kittens")
                           //  .replace(R.id.relative1,codex)
                           //  .addToBackStack("This is to")
-                            .commit();
+                            .commit();*/
 
                      mFragmentNavigation.pushFragment(codex);
                     ((MainActivity)getActivity()).updateToolbarTitle("Codex 2.0");
 
                 }
 
-                if(i==2)
+                if(i==2 && mFragmentNavigation!=null)
                 {
                     CodeWars3 codeWars3 = CodeWars3.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         codeWars3.setSharedElementEnterTransition(new DetailsTransition());
                         codeWars3.setEnterTransition(new AutoTransition());
-                        setExitTransition(new AutoTransition());
+                        codeWars3.setExitTransition(new AutoTransition());
                         codeWars3.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
@@ -219,12 +218,12 @@ public class CodeItOut extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Freshers Code Zone",R.drawable.login1);
+        SubActData ed = new SubActData("Freshers Code Zone",R.drawable.freshers);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Codex 2.0",R.drawable.login1);
+        ed = new SubActData("Codex 2.0",R.drawable.codex);
         arrayEvents.add(ed);
-        ed = new SubActData("Code Wars III",R.drawable.login1);
+        ed = new SubActData("Code Wars III",R.drawable.codewar);
         arrayEvents.add(ed);
 
         return arrayEvents;

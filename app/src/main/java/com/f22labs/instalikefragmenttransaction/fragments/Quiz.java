@@ -68,6 +68,8 @@ import com.f22labs.instalikefragmenttransaction.Data.SubActData;
 import com.f22labs.instalikefragmenttransaction.DetailsTransition;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.IPLAuction;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.TechnoMgmtQuiz;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
@@ -114,8 +116,6 @@ public class Quiz extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
-
         ButterKnife.bind(this, rootView);
 
         Bundle args = getArguments();
@@ -126,7 +126,7 @@ public class Quiz extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() );
 
         lv.setAdapter(adapter);
 
@@ -145,13 +145,13 @@ public class Quiz extends BaseFragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i==0)
                 {
-                    FreshersCodeZone freshersCodeZone = FreshersCodeZone.newInstance(0);
+                    IPLAuction iplAuction = IPLAuction.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        freshersCodeZone.setSharedElementEnterTransition(new DetailsTransition());
-                        freshersCodeZone.setEnterTransition(new AutoTransition());
-                        freshersCodeZone.setExitTransition(new AutoTransition());
-                        freshersCodeZone.setSharedElementReturnTransition(new DetailsTransition());
+                        iplAuction.setSharedElementEnterTransition(new DetailsTransition());
+                        iplAuction.setEnterTransition(new AutoTransition());
+                        iplAuction.setExitTransition(new AutoTransition());
+                        iplAuction.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -161,20 +161,20 @@ public class Quiz extends BaseFragment {
                            // .addToBackStack("This is to")
                             .commit();
 
-                      mFragmentNavigation.pushFragment(freshersCodeZone);
+                      mFragmentNavigation.pushFragment(iplAuction);
                     ((MainActivity)getActivity()).updateToolbarTitle("IPL Auction");
 
                 }
 
                 if(i==1)
                 {
-                    Codex codex = Codex.newInstance(0);
+                    TechnoMgmtQuiz technoMgmtQuiz = TechnoMgmtQuiz.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codex.setSharedElementEnterTransition(new DetailsTransition());
-                        codex.setEnterTransition(new AutoTransition());
-                        codex.setExitTransition(new AutoTransition());
-                        codex.setSharedElementReturnTransition(new DetailsTransition());
+                        technoMgmtQuiz.setSharedElementEnterTransition(new DetailsTransition());
+                        technoMgmtQuiz.setEnterTransition(new AutoTransition());
+                        technoMgmtQuiz.setExitTransition(new AutoTransition());
+                        technoMgmtQuiz.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -184,7 +184,7 @@ public class Quiz extends BaseFragment {
                           //  .addToBackStack("This is to")
                             .commit();
 
-                     mFragmentNavigation.pushFragment(codex);
+                     mFragmentNavigation.pushFragment(technoMgmtQuiz);
                     ((MainActivity)getActivity()).updateToolbarTitle("Techno Management Quiz");
 
                 }
@@ -203,10 +203,10 @@ public class Quiz extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("IPL Auction",R.drawable.login1);
+        SubActData ed = new SubActData("IPL Auction",R.drawable.iplauctions);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Techno Management Quiz",R.drawable.login1);
+        ed = new SubActData("Techno Management Quiz",R.drawable.tmquiz);
         arrayEvents.add(ed);
 
         return arrayEvents;

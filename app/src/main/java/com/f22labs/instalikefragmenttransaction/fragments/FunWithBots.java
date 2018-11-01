@@ -68,6 +68,8 @@ import com.f22labs.instalikefragmenttransaction.Data.SubActData;
 import com.f22labs.instalikefragmenttransaction.DetailsTransition;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.Codex;
 import com.f22labs.instalikefragmenttransaction.FinalActivity.FreshersCodeZone;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.FullThrottle;
+import com.f22labs.instalikefragmenttransaction.FinalActivity.RoboSoccer;
 import com.f22labs.instalikefragmenttransaction.R;
 import com.f22labs.instalikefragmenttransaction.activities.MainActivity;
 import com.f22labs.instalikefragmenttransaction.listview.CustomAdapterSubAct;
@@ -114,8 +116,6 @@ public class FunWithBots extends BaseFragment {
 
         View rootView = inflater.inflate(R.layout.activity_code_it_out, container, false);
 
-        View gama =  inflater.inflate(R.layout.sub_act_model, container, false);
-
         ButterKnife.bind(this, rootView);
 
         Bundle args = getArguments();
@@ -126,7 +126,7 @@ public class FunWithBots extends BaseFragment {
 
         lv = (ListView) rootView.findViewById(R.id.subActList);
 
-        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() , gama );
+        adapter = new CustomAdapterSubAct(this.getActivity() , getSubActivity() );
 
         lv.setAdapter(adapter);
 
@@ -145,13 +145,13 @@ public class FunWithBots extends BaseFragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i==0)
                 {
-                    FreshersCodeZone freshersCodeZone = FreshersCodeZone.newInstance(0);
+                    RoboSoccer roboSoccer = RoboSoccer.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        freshersCodeZone.setSharedElementEnterTransition(new DetailsTransition());
-                        freshersCodeZone.setEnterTransition(new AutoTransition());
-                        freshersCodeZone.setExitTransition(new AutoTransition());
-                        freshersCodeZone.setSharedElementReturnTransition(new DetailsTransition());
+                        roboSoccer.setSharedElementEnterTransition(new DetailsTransition());
+                        roboSoccer.setEnterTransition(new AutoTransition());
+                        roboSoccer.setExitTransition(new AutoTransition());
+                        roboSoccer.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -161,20 +161,20 @@ public class FunWithBots extends BaseFragment {
                            // .addToBackStack("This is to")
                             .commit();
 
-                      mFragmentNavigation.pushFragment(freshersCodeZone);
+                      mFragmentNavigation.pushFragment(roboSoccer);
                     ((MainActivity)getActivity()).updateToolbarTitle("Robo Soccer");
 
                 }
 
                 if(i==1)
                 {
-                    Codex codex = Codex.newInstance(0);
+                    FullThrottle fullThrottle = FullThrottle.newInstance(0);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        codex.setSharedElementEnterTransition(new DetailsTransition());
-                        codex.setEnterTransition(new AutoTransition());
-                        codex.setExitTransition(new AutoTransition());
-                        codex.setSharedElementReturnTransition(new DetailsTransition());
+                        fullThrottle.setSharedElementEnterTransition(new DetailsTransition());
+                        fullThrottle.setEnterTransition(new AutoTransition());
+                        fullThrottle.setExitTransition(new AutoTransition());
+                        fullThrottle.setSharedElementReturnTransition(new DetailsTransition());
                     }
 
                     getActivity().getSupportFragmentManager()
@@ -184,7 +184,7 @@ public class FunWithBots extends BaseFragment {
                           //  .addToBackStack("This is to")
                             .commit();
 
-                     mFragmentNavigation.pushFragment(codex);
+                     mFragmentNavigation.pushFragment(fullThrottle);
                     ((MainActivity)getActivity()).updateToolbarTitle("Full Throttle");
 
                 }
@@ -203,10 +203,10 @@ public class FunWithBots extends BaseFragment {
     {
         ArrayList<SubActData> arrayEvents = new ArrayList<>();
 
-        SubActData ed = new SubActData("Robo Soccer",R.drawable.login1);
+        SubActData ed = new SubActData("Robo Soccer",R.drawable.robosoccer);
         arrayEvents.add(ed);
 
-        ed = new SubActData("Full Throttle",R.drawable.login1);
+        ed = new SubActData("Full Throttle",R.drawable.fullthrottle);
         arrayEvents.add(ed);
 
 

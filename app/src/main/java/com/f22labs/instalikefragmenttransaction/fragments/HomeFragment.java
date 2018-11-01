@@ -155,7 +155,7 @@ public class HomeFragment extends BaseFragment {
             }
         });*/
 
-         ((MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "Home" :"Sub Home" + (fragCount + 1));
+         ((MainActivity)getActivity()).updateToolbarTitle((fragCount == 0) ? "TechVibes'18" :"Sub Home" + (fragCount + 1));
     }
 
     @Override
@@ -188,21 +188,21 @@ public class HomeFragment extends BaseFragment {
             imageItems.add(new ImageItem(bitmap, "Image#" + i));
         }*/
 
-       ImageItem id = new ImageItem(R.drawable.logo1,"Code It Out");
+       ImageItem id = new ImageItem(R.drawable.coding,"Code It Out");
         imageItems.add(id);
-        id = new ImageItem(R.drawable.logo1,"Fry The Bread Board");
+        id = new ImageItem(R.drawable.breadboarding,"Fry The Bread Board");
         imageItems.add(id);
-        id = new ImageItem(R.drawable.logo1,"Fun with Bots");
+        id = new ImageItem(R.drawable.robotics,"Fun with Bots");
         imageItems.add(id);
-        id = new ImageItem(R.drawable.logo1,"Present And Exhibit");
+        id = new ImageItem(R.drawable.paperp,"Present And Exhibit");
         imageItems.add(id);
-        id = new ImageItem(R.drawable.logo1,"ECell and Management");
+        id = new ImageItem(R.drawable.ecell,"ECell and Management");
         imageItems.add(id);
-        id = new ImageItem(R.drawable.logo1,"Animated");
+        id = new ImageItem(R.drawable.animation,"Animated");
         imageItems.add(id);
-        id = new ImageItem(R.drawable.logo1,"Quizical.ly");
+        id = new ImageItem(R.drawable.quiz,"Quizical.ly");
         imageItems.add(id);
-        id = new ImageItem(R.drawable.logo1,"Why So Serious??");
+        id = new ImageItem(R.drawable.whyserious,"Why So Serious??");
         imageItems.add(id);
 
         return imageItems;

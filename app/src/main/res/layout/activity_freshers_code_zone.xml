@@ -13,7 +13,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/back3"
     tools:context="com.f22labs.instalikefragmenttransaction.FinalActivity.Codex">
 
     <ImageView
@@ -208,6 +208,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="Download"
+            android:visibility="invisible"
             android:padding="10dp"
             android:layout_margin="7dp"
             android:background="@drawable/circle"

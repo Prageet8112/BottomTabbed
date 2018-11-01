@@ -85,6 +85,7 @@ public class CustomAdapterContacts extends BaseAdapter {
         rbd1.setCircular(true);
         img1.setImageDrawable(rbd1);
 
+
         Bitmap bitmap2 = BitmapFactory.decodeResource(view.getResources(),R.drawable.call);
         RoundedBitmapDrawable rbd2 = RoundedBitmapDrawableFactory.create(view.getResources(),bitmap2);
         rbd2.setCircular(true);
